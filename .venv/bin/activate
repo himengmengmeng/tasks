@@ -41,12 +41,12 @@ case "$(uname)" in
     CYGWIN*|MSYS*|MINGW*)
         # transform D:\path\to\venv to /d/path/to/venv on MSYS and MINGW
         # and to /cygdrive/d/path/to/venv on Cygwin
-        VIRTUAL_ENV=$(cygpath '/Users/meng/Library/Mobile Documents/com~apple~CloudDocs/Django_Minimum_Version/.venv')
+        VIRTUAL_ENV=$(cygpath '/Users/meng/Desktop/Tasks&English_Words/.venv')
         export VIRTUAL_ENV
         ;;
     *)
         # use the path as-is
-        export VIRTUAL_ENV='/Users/meng/Library/Mobile Documents/com~apple~CloudDocs/Django_Minimum_Version/.venv'
+        export VIRTUAL_ENV='/Users/meng/Desktop/Tasks&English_Words/.venv'
         ;;
 esac
 

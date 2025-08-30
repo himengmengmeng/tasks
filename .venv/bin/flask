@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/meng/Library/Mobile Documents/com~apple~CloudDocs/Django_Minimum_Version/.venv/bin/python3.12" "$0" "$@"
-' '''
+#!/Users/meng/Desktop/Tasks&English_Words/.venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
