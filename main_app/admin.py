@@ -54,39 +54,19 @@ class EnglishWordAdmin(admin.ModelAdmin):
             return qs
         # 否则只显示当前用户创建的单词
         return qs.filter(creator=request.user)
-
+    
     def has_change_permission(self, request, obj=None):
-    # 如果是超级用户，允许编辑所有单词
+        # 如果是超级用户，允许编辑所有单词
         if request.user.is_superuser:
             return True
-    # 如果obj存在，只允许创建者编辑
+        # 如果obj存在，只允许创建者编辑
         if obj is not None and obj.creator != request.user:
             return False
         return True
-
+    
     def has_delete_permission(self, request, obj=None):
-    # 如果是超级用户，允许删除所有单词
-        if request.user.is_superuser:
-            return True
-    # 如果obj存在，只允许创建者删除
-        if obj is not None and obj.creator != request.user:
-            return False
-        return True
-    
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
+        # 同样应用编辑权限规则到删除权限
+        return self.has_change_permission(request, obj)
 
 @admin.register(models.EnglishWordMedia)
 class EnglishWordMediaAdmin(admin.ModelAdmin):
@@ -95,10 +75,26 @@ class EnglishWordMediaAdmin(admin.ModelAdmin):
     list_filter = ['uploaded_at', 'word']
     search_fields = ['word__title', 'file']
     actions = None  # 禁用批量操作
-    
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # 如果是超级用户，显示所有文件
+        if request.user.is_superuser:
+            return qs
+        # 否则只显示当前用户创建的文件（通过关联的单词的创建者来过滤）
+        return qs.filter(word__creator=request.user)
+
     def has_delete_permission(self, request, obj=None):
-        # 禁止删除多媒体文件
-        return False
+        # 超级用户拥有删除权限
+        if request.user.is_superuser:
+            return True
+        # 如果obj存在，检查其关联的单词是否是当前用户创建的
+        if obj is not None and obj.word.creator != request.user:
+            return False
+        return True
+
+    def has_change_permission(self, request, obj=None):
+        return self.has_delete_permission(request, obj)
     
     def get_readonly_fields(self, request, obj=None):
         # 在编辑页面中，将word字段设置为只读
