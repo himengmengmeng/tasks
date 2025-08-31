@@ -30,7 +30,7 @@ class EnglishWordMediaInline(admin.TabularInline):
 class EnglishWordAdmin(admin.ModelAdmin):
     """英文单词管理"""
     list_display = ['title', 'creator', 'created_at', 'media_count']
-    list_filter = ['created_at', 'creator']
+    list_filter = ['created_at']
     search_fields = ['title', 'explanation', 'creator__username', 'creator__first_name', 'creator__last_name']
     inlines = [EnglishWordMediaInline]
     
@@ -72,7 +72,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
 class EnglishWordMediaAdmin(admin.ModelAdmin):
     """英文单词多媒体文件管理"""
     list_display = ['word', 'file', 'uploaded_at']
-    list_filter = ['uploaded_at', 'word']
+    list_filter = ['uploaded_at']
     search_fields = ['word__title', 'file']
     actions = None  # 禁用批量操作
 
