@@ -110,7 +110,7 @@ WSGI_APPLICATION = 'root_directory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Django_Minimum_Version',          # 确保数据库已创建
+        'NAME': 'tasks',          # 确保数据库已创建
         'HOST': 'localhost',
         'USER': 'root',            # MySQL 用户名
         'PASSWORD': '1234567890',  # MySQL 密码
@@ -210,3 +210,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',  # 默认后端
     'guardian.backends.ObjectPermissionBackend',  # guardian 后端
 )
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
