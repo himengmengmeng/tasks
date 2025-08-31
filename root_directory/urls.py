@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
 from main_app import urls as main_app_urls
-
-admin.site.site_header = 'Meng Meng'
-admin.site.index_title = 'Meng'
 from django.conf import settings
 from django.conf.urls.static import static
+
+
+
+# 这行代码会全局隐藏 'View Site' 链接
+admin.site.site_url = None
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +34,9 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
 
 
 

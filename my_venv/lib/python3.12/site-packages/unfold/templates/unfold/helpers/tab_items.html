@@ -1,0 +1,29 @@
+{% load i18n %}
+
+{% if inlines_list or tabs_list %}
+    <nav class="bg-base-100 flex flex-col font-medium gap-1 p-1 rounded-default w-full dark:border-base-700 md:flex-row md:w-auto dark:bg-white/[.04] *:flex *:flex-row *:font-medium *:items-center *:px-2.5 *:py-[5px] *:rounded-default *:transition-colors *:hover:bg-base-700/[.04] *:dark:hover:bg-white/[.04] [&>.active]:bg-white [&>.active]:shadow-xs [&>.active]:text-font-important-light [&>.active]:hover:bg-white [&>.active]:dark:bg-base-900 [&>.active]:dark:hover:bg-base-900 [&>.active]:dark:text-font-important-dark">
+        {% for item in tabs_list %}
+            {% if item.has_permission %}
+                <a href="{% if item.link_callback %}{{ item.link_callback }}{% else %}{{ item.link }}{% endif %}{% if item.inline %}#{{ item.inline|slugify }}{% endif %}" class="{% if item.active and not item.inline %}active{% endif %}" {% if item.inline %}x-on:click="activeTab = '{{ item.inline|slugify }}'" x-bind:class="{'active': activeTab == '{{ item.inline|slugify }}'}"{% endif %}>
+                    {{ item.title }}
+                </a>
+            {% endif %}
+        {% endfor %}
+
+        {% if inlines_list %}
+            <a href="#general" x-on:click="activeTab = 'general'" x-bind:class="{'active': activeTab == 'general'}">
+                {% trans "General" %}
+            </a>
+
+            {% for inline in inlines_list %}
+                <a href="#{{ inline.formset.prefix|slugify }}" x-on:click="activeTab = '{{ inline.formset.prefix|slugify }}'" x-bind:class="{'active': activeTab == '{{ inline.formset.prefix|slugify }}'}">
+                    {% if inline.formset.max_num == 1 %}
+                        {{ inline.opts.verbose_name|capfirst }}
+                    {% else %}
+                        {{ inline.opts.verbose_name_plural|capfirst }}
+                    {% endif %}
+                </a>
+            {% endfor %}
+        {% endif %}
+    </nav>
+{% endif %}
