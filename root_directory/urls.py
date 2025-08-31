@@ -24,6 +24,10 @@ from django.conf.urls.static import static
 
 # 这行代码会全局隐藏 'View Site' 链接
 admin.site.site_url = None
+# 修改 Django Admin 站点的标题（浏览器标签页标题）
+admin.site.site_title = "Meng Space Admin"
+# 修改 Django Admin 站点的头部名称（登录页和管理站点顶部的标题）
+admin.site.site_header = "Meng Space 管理后台"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
