@@ -56,17 +56,35 @@ class EnglishWordAdmin(admin.ModelAdmin):
         return qs.filter(creator=request.user)
 
     def has_change_permission(self, request, obj=None):
-        # 如果是超级用户，允许编辑所有单词
+    # 如果是超级用户，允许编辑所有单词
         if request.user.is_superuser:
             return True
-        # 如果obj存在，只允许创建者编辑
+    # 如果obj存在，只允许创建者编辑
+        if obj is not None and obj.creator != request.user:
+            return False
+        return True
+
+    def has_delete_permission(self, request, obj=None):
+    # 如果是超级用户，允许删除所有单词
+        if request.user.is_superuser:
+            return True
+    # 如果obj存在，只允许创建者删除
         if obj is not None and obj.creator != request.user:
             return False
         return True
     
-    def has_delete_permission(self, request, obj=None):
-        # 同样应用编辑权限规则到删除权限
-        return self.has_change_permission(request, obj)
+
+
+
+    
+
+    
+
+
+
+
+
+
 
 
 
