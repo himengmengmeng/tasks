@@ -31,13 +31,42 @@ class EnglishWordAdmin(admin.ModelAdmin):
     """英文单词管理"""
     list_display = ['title', 'creator', 'created_at', 'media_count']
     list_filter = ['created_at', 'creator']
-    search_fields = ['title', 'explanation']
+    search_fields = ['title', 'explanation', 'creator__username', 'creator__first_name', 'creator__last_name']
     inlines = [EnglishWordMediaInline]
+    
+    # 排除创建者字段，使其不在表单中显示
+    exclude = ['creator']
     
     def media_count(self, obj):
         return obj.media_files.count()
     media_count.short_description = '附件数量'
+    
+    def save_model(self, request, obj, form, change):
+        # 如果是新创建的单词，自动设置创建者为当前用户
+        if not obj.pk:
+            obj.creator = request.user
+        super().save_model(request, obj, form, change)
+    
+    def get_queryset(self, request):
+        qs = super().get_queryset(request).select_related('creator')
+        # 如果是超级用户，显示所有单词
+        if request.user.is_superuser:
+            return qs
+        # 否则只显示当前用户创建的单词
+        return qs.filter(creator=request.user)
 
+    def has_change_permission(self, request, obj=None):
+        # 如果是超级用户，允许编辑所有单词
+        if request.user.is_superuser:
+            return True
+        # 如果obj存在，只允许创建者编辑
+        if obj is not None and obj.creator != request.user:
+            return False
+        return True
+    
+    def has_delete_permission(self, request, obj=None):
+        # 同样应用编辑权限规则到删除权限
+        return self.has_change_permission(request, obj)
 
 
 
