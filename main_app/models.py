@@ -5,19 +5,19 @@ from django.core.validators import FileExtensionValidator
 
 class EnglishWord(models.Model):
     """英文单词模型"""
-    title = models.CharField(max_length=255, verbose_name="单词")
-    explanation = models.TextField(verbose_name="单词解释")
-    notes = models.TextField(blank=True, null=True, verbose_name="备注")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    title = models.CharField(max_length=255, verbose_name="Words")
+    explanation = models.TextField(verbose_name="Word Explanation")
+    notes = models.TextField(blank=True, null=True, verbose_name="Noyes")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name="创建者"
+        verbose_name="Creator"
     )
     
     class Meta:
-        verbose_name = "英文单词"
-        verbose_name_plural = "英文单词"
+        verbose_name = "English Word"
+        verbose_name_plural = "English Words"
         ordering = ['-created_at']
     
     def __str__(self):
@@ -29,7 +29,7 @@ class EnglishWordMedia(models.Model):
         EnglishWord, 
         on_delete=models.CASCADE, 
         related_name='media_files',
-        verbose_name="关联单词"
+        verbose_name="associated Word"
     )
     file = models.FileField(
         upload_to='word_media/%Y/%m/%d/',
@@ -37,13 +37,13 @@ class EnglishWordMedia(models.Model):
             allowed_extensions=['jpg', 'jpeg', 'png', 'gif', 'bmp', 'mp4', 'avi', 'mov', 
                                'pdf', 'doc', 'docx', 'xls', 'xlsx']
         )],
-        verbose_name="附件"
+        verbose_name="attached File"
     )
     uploaded_at = models.DateTimeField(auto_now_add=True, verbose_name="上传时间")
     
     class Meta:
-        verbose_name = "单词多媒体文件"
-        verbose_name_plural = "单词多媒体文件"
+        verbose_name = "media File"
+        verbose_name_plural = "media Files"
         ordering = ['-uploaded_at']
     
     def __str__(self):
