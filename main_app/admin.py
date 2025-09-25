@@ -31,7 +31,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
     """英文单词管理"""
     list_display = ['title', 'creator', 'created_at', 'media_count']
     list_filter = ['created_at']
-    search_fields = ['title', 'explanation', 'creator__username', 'creator__first_name', 'creator__last_name']
+    search_fields = ['title', 'explanation', 'notes', 'creator__username', 'creator__first_name', 'creator__last_name']
     inlines = [EnglishWordMediaInline]
     
     # 排除创建者字段，使其不在表单中显示
