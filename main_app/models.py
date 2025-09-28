@@ -4,10 +4,10 @@ from django.core.validators import MinValueValidator
 from django.core.validators import FileExtensionValidator
 
 class EnglishWord(models.Model):
-    """英文单词模型"""
+    
     title = models.CharField(max_length=255, verbose_name="Words")
     explanation = models.TextField(verbose_name="Word Explanation")
-    notes = models.TextField(blank=True, null=True, verbose_name="Noyes")
+    notes = models.TextField(blank=True, null=True, verbose_name="Notes")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
@@ -24,7 +24,7 @@ class EnglishWord(models.Model):
         return self.title
 
 class EnglishWordMedia(models.Model):
-    """英文单词的多媒体文件模型"""
+    
     word = models.ForeignKey(
         EnglishWord, 
         on_delete=models.CASCADE, 
