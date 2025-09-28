@@ -49,11 +49,13 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework',
     'debug_toolbar',
-    'main_app.apps.MainAppConfig',  # 使用应用配置类而不是字符串
+    'main_app.apps.MainAppConfig',
+    'goal_apps.apps.GoalAppsConfig',
     'core.apps.CoreConfig',
     'django_extensions',
-    'guardian',
+    'guardian', 
 ]
+
 
 
 
