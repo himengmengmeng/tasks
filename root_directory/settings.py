@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'main_app.apps.MainAppConfig',
-    'goal_apps.apps.GoalAppsConfig',
+    'goal_app.apps.GoalAppConfig',
     'core.apps.CoreConfig',
     'django_extensions',
     'guardian', 
