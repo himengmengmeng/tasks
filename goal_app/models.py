@@ -11,7 +11,7 @@ class Goal(models.Model):
     ]
     
     title = models.CharField(max_length=255, verbose_name='标题')
-    description = models.TextField(verbose_name='描述')
+    description = models.TextField(blank=True, null=True, verbose_name='描述')
     notes = models.TextField(blank=True, null=True, verbose_name='备注')
     created_time = models.DateTimeField(default=timezone.now, verbose_name='创建时间')
     creator = models.ForeignKey(
@@ -40,10 +40,12 @@ class Task(models.Model):
     ]
     
     name = models.CharField(max_length=255, verbose_name='任务名称')
-    description = models.TextField(verbose_name='描述')
+    description = models.TextField(blank=True, null=True, verbose_name='描述')
     goal = models.ForeignKey(
         Goal, 
-        on_delete=models.CASCADE, 
+        on_delete=models.SET_NULL,  # 修改为 SET_NULL
+        null=True,                  # 允许数据库存储 NULL
+        blank=True,                 # 允许表单提交空值
         related_name='tasks',
         verbose_name='关联目标'
     )
