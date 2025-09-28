@@ -47,6 +47,12 @@ class Task(models.Model):
         related_name='tasks',
         verbose_name='关联目标'
     )
+    # 新增：task创建者字段
+    creator = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.CASCADE, 
+        verbose_name='任务创建者'
+    )
     created_time = models.DateTimeField(default=timezone.now, verbose_name='建立时间')
     status = models.CharField(
         max_length=20, 
