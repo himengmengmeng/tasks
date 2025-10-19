@@ -10,6 +10,24 @@ class Goal(models.Model):
         ('resolved', '已解决'),
     ]
     
+    # 新增：优先级选项
+    PRIORITY_CHOICES = [
+        ('very_high', '极高重要性'),
+        ('high', '高重要性'),
+        ('medium', '中等重要性'),
+        ('low', '低重要性'),
+        ('very_low', '极低/无关重要性'),
+    ]
+    
+    # 新增：紧急性选项
+    URGENCY_CHOICES = [
+        ('very_high', '极急'),
+        ('high', '高紧急性'),
+        ('medium', '中等紧急性'),
+        ('low', '低紧急性'),
+        ('very_low', '极低/无时间限制'),
+    ]
+    
     title = models.CharField(max_length=255, verbose_name='标题')
     description = models.TextField(blank=True, null=True, verbose_name='描述')
     notes = models.TextField(blank=True, null=True, verbose_name='备注')
@@ -25,10 +43,25 @@ class Goal(models.Model):
         default='not_started',
         verbose_name='状态'
     )
+    # 新增：优先级字段
+    priority = models.CharField(
+        max_length=20,
+        choices=PRIORITY_CHOICES,
+        default='medium',
+        verbose_name='优先级'
+    )
+    # 新增：紧急性字段
+    urgency = models.CharField(
+        max_length=20,
+        choices=URGENCY_CHOICES,
+        default='medium',
+        verbose_name='紧急性'
+    )
     
     class Meta:
         verbose_name = '目标'
         verbose_name_plural = '目标'
+        ordering = ['-created_time']  # 新增：按创建时间倒序排列
     
     def __str__(self):
         return self.title
@@ -37,6 +70,24 @@ class Task(models.Model):
     STATUS_CHOICES = [
         ('not_done', '未完成'),
         ('done', '已完成'),
+    ]
+    
+    # 新增：优先级选项（与Goal相同）
+    PRIORITY_CHOICES = [
+        ('very_high', '极高重要性'),
+        ('high', '高重要性'),
+        ('medium', '中等重要性'),
+        ('low', '低重要性'),
+        ('very_low', '极低/无关重要性'),
+    ]
+    
+    # 新增：紧急性选项（与Goal相同）
+    URGENCY_CHOICES = [
+        ('very_high', '极急'),
+        ('high', '高紧急性'),
+        ('medium', '中等紧急性'),
+        ('low', '低紧急性'),
+        ('very_low', '极低/无时间限制'),
     ]
     
     name = models.CharField(max_length=255, verbose_name='任务名称')
@@ -62,10 +113,25 @@ class Task(models.Model):
         default='not_done',
         verbose_name='状态'
     )
+    # 新增：优先级字段
+    priority = models.CharField(
+        max_length=20,
+        choices=PRIORITY_CHOICES,
+        default='medium',
+        verbose_name='优先级'
+    )
+    # 新增：紧急性字段
+    urgency = models.CharField(
+        max_length=20,
+        choices=URGENCY_CHOICES,
+        default='medium',
+        verbose_name='紧急性'
+    )
     
     class Meta:
         verbose_name = '任务'
         verbose_name_plural = '任务'
+        ordering = ['-created_time']  # 新增：按创建时间倒序排列
     
     def __str__(self):
         return self.name
