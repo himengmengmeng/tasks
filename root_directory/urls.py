@@ -1,18 +1,3 @@
-"""django minimum version URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
@@ -27,9 +12,10 @@ admin.site.site_url = None
 # 修改 Django Admin 站点的标题（浏览器标签页标题）
 admin.site.site_title = "Meng Space Admin"
 # 修改 Django Admin 站点的头部名称（登录页和管理站点顶部的标题）
-admin.site.site_header = "Meng Space 管理后台"
+admin.site.site_header = "Meng Space"
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
