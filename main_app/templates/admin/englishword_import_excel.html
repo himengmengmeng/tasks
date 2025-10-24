@@ -3,7 +3,7 @@
 
 {% block content %}
 <div id="content-main">
-    
+    <h1>导入英文单词 - Excel</h1>
     
     <div class="module">
         <h2>导入说明</h2>
@@ -13,12 +13,25 @@
                 <li><strong>A列</strong> (必需) - 单词 (title)</li>
                 <li><strong>B列</strong> (必需) - 单词解释 (explanation)</li>
                 <li><strong>C列</strong> (可选) - 备注 (notes)</li>
+                <!-- <font color="red">**新增点：添加标签列说明**</font> -->
+                <li><strong>D列</strong> (可选) - 标签 (tags)，多个标签用逗号分隔</li>
             </ul>
             <p>第一行应为列标题。</p>
             <p><strong>注意：</strong>导入的单词将自动设置为当前登录用户创建。</p>
         </div>
         
-        
+        <h2>上传文件</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="excel_file">选择Excel文件:</label>
+                <input type="file" name="excel_file" accept=".xlsx, .xls" required>
+            </div>
+            <div class="submit-row">
+                <input type="submit" value="开始导入" class="default">
+                <a href="{% url 'admin:main_app_englishword_changelist' %}" class="button">返回单词列表</a>
+            </div>
+        </form>
         
         <h2>示例文件格式</h2>
         <div class="form-row">
@@ -28,6 +41,8 @@
                         <th style="border: 1px solid #ddd; padding: 8px;">A列: 单词</th>
                         <th style="border: 1px solid #ddd; padding: 8px;">B列: 单词解释</th>
                         <th style="border: 1px solid #ddd; padding: 8px;">C列: 备注</th>
+                        <!-- <font color="red">**新增点：添加标签列**</font> -->
+                        <th style="border: 1px solid #ddd; padding: 8px;">D列: 标签</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,35 +50,26 @@
                         <td style="border: 1px solid #ddd; padding: 8px;">apple</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">a fruit that grows on trees</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">red or green fruit</td>
+                        <!-- <font color="red">**新增点：标签示例**</font> -->
+                        <td style="border: 1px solid #ddd; padding: 8px;">水果,健康食品</td>
                     </tr>
                     <tr>
                         <td style="border: 1px solid #ddd; padding: 8px;">book</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">a set of printed pages</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">used for reading</td>
+                        <!-- <font color="red">**新增点：标签示例**</font> -->
+                        <td style="border: 1px solid #ddd; padding: 8px;">学习,教育</td>
                     </tr>
                     <tr>
                         <td style="border: 1px solid #ddd; padding: 8px;">computer</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">an electronic device</td>
                         <td style="border: 1px solid #ddd; padding: 8px;">for processing data</td>
+                        <!-- <font color="red">**新增点：标签示例**</font> -->
+                        <td style="border: 1px solid #ddd; padding: 8px;">科技,电子产品</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
-<h2>上传文件</h2>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-row">
-                <label for="excel_file">选择Excel文件:</label>
-                <input type="file" name="excel_file" accept=".xlsx, .xls" required>
-            </div>
-            <div class="submit-row">
-                <input type="submit" value="开始导入" class="default">
-                <!-- <font color="red">**修改点：更新返回链接**</font> -->
-                
-            </div>
-        </form>
-
 {% endblock %}

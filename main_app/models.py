@@ -3,6 +3,26 @@ from django.db import models
 from django.core.validators import MinValueValidator
 from django.core.validators import FileExtensionValidator
 
+class Tag(models.Model):
+    """标签模型"""
+    name = models.CharField(max_length=100, verbose_name="标签名称")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    creator = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.CASCADE, 
+        verbose_name="创建者"
+    )
+    
+    class Meta:
+        verbose_name = "标签"
+        verbose_name_plural = "标签"
+        ordering = ['-created_at']
+        # 确保同一用户不能创建重复的标签名称
+        unique_together = ['name', 'creator']
+    
+    def __str__(self):
+        return self.name
+
 class EnglishWord(models.Model):
     
     title = models.CharField(max_length=255, verbose_name="Words")
@@ -14,6 +34,13 @@ class EnglishWord(models.Model):
         on_delete=models.CASCADE, 
         verbose_name="Creator"
     )
+    # <font color="red">**新增点：添加多对多标签关系**</font>
+    tags = models.ManyToManyField(
+        Tag, 
+        blank=True, 
+        related_name='english_words',
+        verbose_name="Tags"
+    )
     
     class Meta:
         verbose_name = "English Word"
@@ -22,6 +49,11 @@ class EnglishWord(models.Model):
     
     def __str__(self):
         return self.title
+    
+    # <font color="red">**新增点：获取标签名称的便捷方法**</font>
+    def get_tag_names(self):
+        return ", ".join([tag.name for tag in self.tags.all()])
+    get_tag_names.short_description = "标签"
 
 class EnglishWordMedia(models.Model):
     

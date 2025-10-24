@@ -26,6 +26,25 @@ import openpyxl  # 新增：用于处理Excel文件
 from django.db import transaction
 import io
 
+# <font color="red">**新增点：标签过滤器**</font>
+class TagFilter(admin.SimpleListFilter):
+    """按标签过滤单词"""
+    title = 'Tags'
+    parameter_name = 'tag'
+
+    def lookups(self, request, model_admin):
+        # 根据用户权限返回不同的标签选项
+        if request.user.is_superuser:
+            tags = models.Tag.objects.all()
+        else:
+            tags = models.Tag.objects.filter(creator=request.user)
+        return [(tag.id, tag.name) for tag in tags.distinct()]
+
+    def queryset(self, request, queryset):
+        if self.value():
+            return queryset.filter(tags__id=self.value())
+        return queryset
+
 class EnglishWordMediaInline(admin.TabularInline):
     """单词多媒体文件内联管理"""
     model = models.EnglishWordMedia
@@ -37,18 +56,19 @@ class EnglishWordMediaInline(admin.TabularInline):
 @admin.register(models.EnglishWord)
 class EnglishWordAdmin(admin.ModelAdmin):
     """英文单词管理"""
-    list_display = ['title', 'creator', 'created_at', 'media_count']
-    list_filter = ['created_at']
-    search_fields = ['title', 'explanation', 'notes', 'creator__username', 'creator__first_name', 'creator__last_name']
+    # <font color="red">**修改点：在列表显示中添加标签**</font>
+    list_display = ['title', 'creator', 'created_at', 'media_count', 'get_tag_names']
+    list_filter = ['created_at', TagFilter]  # <font color="red">**新增标签过滤器**</font>
+    search_fields = ['title', 'explanation', 'notes', 'creator__username', 'creator__first_name', 'creator__last_name', 'tags__name']
     inlines = [EnglishWordMediaInline]
     
-    # <font color="red">**修改点：移除导入action，只保留导出actions**</font>
-    actions = ['export_as_excel', 'export_as_csv', 'export_as_json']
+    # <font color="red">**修改点：在表单字段中添加标签**</font>
+    filter_horizontal = ['tags']  # 水平多选标签
     
-    # <font color="red">**增加点：在change_list模板中添加自定义按钮**</font>
+    actions = ['export_as_excel', 'export_as_csv', 'export_as_json']
     change_list_template = 'admin/englishword_change_list.html'
     
-    # 排除创建者字段，使其不在表单中显示
+    # <font color="red">**修改点：排除创建者字段，但保留标签字段**</font>
     exclude = ['creator']
     
     def get_urls(self):
@@ -70,7 +90,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
     
     def get_queryset(self, request):
-        qs = super().get_queryset(request).select_related('creator')
+        qs = super().get_queryset(request).select_related('creator').prefetch_related('tags')
         # 如果是超级用户，显示所有单词
         if request.user.is_superuser:
             return qs
@@ -90,7 +110,19 @@ class EnglishWordAdmin(admin.ModelAdmin):
         # 同样应用编辑权限规则到删除权限
         return self.has_change_permission(request, obj)
     
-    # 新增：导出为Excel功能
+    # <font color="red">**新增点：重写表单字段的queryset，限制标签选择范围**</font>
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name == "tags":
+            # 根据用户权限过滤可选的标签
+            if request.user.is_superuser:
+                # 管理员可以看到所有标签
+                kwargs["queryset"] = models.Tag.objects.all()
+            else:
+                # 普通用户只能看到自己创建的标签
+                kwargs["queryset"] = models.Tag.objects.filter(creator=request.user)
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
+    
+    # 导出为Excel功能
     def export_as_excel(self, request, queryset):
         """导出选中的单词为Excel"""
         # 创建工作簿和工作表
@@ -98,8 +130,8 @@ class EnglishWordAdmin(admin.ModelAdmin):
         ws = wb.active
         ws.title = "English Words"
         
-        # 添加表头
-        headers = ['单词', '解释', '备注', '创建者', '创建时间']
+        # <font color="red">**修改点：在导出中添加标签列**</font>
+        headers = ['单词', '解释', '备注', '标签', '创建者', '创建时间']
         ws.append(headers)
         
         # 添加数据
@@ -108,6 +140,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
                 word.title, 
                 word.explanation, 
                 word.notes or '',
+                word.get_tag_names(),  # <font color="red">**新增标签数据**</font>
                 word.creator.username,
                 word.created_at.strftime('%Y-%m-%d %H:%M:%S')
             ])
@@ -125,20 +158,22 @@ class EnglishWordAdmin(admin.ModelAdmin):
         return response
     export_as_excel.short_description = "导出选中的单词为Excel"
     
-    # 导出为CSV功能（保留原有功能）
+    # 导出为CSV功能
     def export_as_csv(self, request, queryset):
         """导出选中的单词为CSV"""
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="english_words.csv"'
         
         writer = csv.writer(response)
-        writer.writerow(['单词', '解释', '备注', '创建者', '创建时间'])
+        # <font color="red">**修改点：在导出中添加标签列**</font>
+        writer.writerow(['单词', '解释', '备注', '标签', '创建者', '创建时间'])
         
         for word in queryset:
             writer.writerow([
                 word.title, 
                 word.explanation, 
                 word.notes or '',
+                word.get_tag_names(),  # <font color="red">**新增标签数据**</font>
                 word.creator.username,
                 word.created_at.strftime('%Y-%m-%d %H:%M:%S')
             ])
@@ -147,7 +182,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
         return response
     export_as_csv.short_description = "导出选中的单词为CSV"
     
-    # 导出为JSON功能（保留原有功能）
+    # 导出为JSON功能
     def export_as_json(self, request, queryset):
         """导出选中的单词为JSON"""
         data = []
@@ -156,6 +191,8 @@ class EnglishWordAdmin(admin.ModelAdmin):
                 'title': word.title,
                 'explanation': word.explanation,
                 'notes': word.notes,
+                # <font color="red">**修改点：在导出中添加标签数据**</font>
+                'tags': [tag.name for tag in word.tags.all()],
                 'creator': word.creator.username,
                 'created_at': word.created_at.isoformat(),
                 'media_files': [media.file.url for media in word.media_files.all()]
@@ -168,9 +205,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
         return response
     export_as_json.short_description = "导出选中的单词为JSON"
     
-    # <font color="red">**修改点：删除原来的import_from_excel action方法**</font>
-    
-    # 新增：Excel导入视图
+    # Excel导入视图
     def import_excel_view(self, request):
         """处理Excel文件导入的视图"""
         context = {
@@ -203,6 +238,8 @@ class EnglishWordAdmin(admin.ModelAdmin):
                             title = str(row[0]).strip() if row[0] else ''
                             explanation = str(row[1]).strip() if row[1] else ''
                             notes = str(row[2]).strip() if row[2] else ''
+                            # <font color="red">**新增点：解析标签数据（第4列）**</font>
+                            tags_str = str(row[3]).strip() if len(row) > 3 and row[3] else ''
                             
                             # 验证必要字段
                             if not title:
@@ -219,6 +256,19 @@ class EnglishWordAdmin(admin.ModelAdmin):
                             )
                             word.full_clean()  # 验证数据
                             word.save()
+                            
+                            # <font color="red">**新增点：处理标签关联**</font>
+                            if tags_str:
+                                tag_names = [tag_name.strip() for tag_name in tags_str.split(',') if tag_name.strip()]
+                                for tag_name in tag_names:
+                                    # 获取或创建标签（仅限当前用户创建的标签）
+                                    tag, created = models.Tag.objects.get_or_create(
+                                        name=tag_name,
+                                        creator=request.user,
+                                        defaults={'name': tag_name, 'creator': request.user}
+                                    )
+                                    word.tags.add(tag)
+                            
                             success_count += 1
                             
                         except Exception as e:
@@ -240,6 +290,48 @@ class EnglishWordAdmin(admin.ModelAdmin):
                 messages.error(request, f"文件处理错误: {str(e)}")
         
         return render(request, 'admin/englishword_import_excel.html', context)
+
+@admin.register(models.Tag)
+class TagAdmin(admin.ModelAdmin):
+    """标签管理"""
+    list_display = ['name', 'creator', 'created_at', 'word_count']
+    list_filter = ['created_at']
+    search_fields = ['name', 'creator__username']
+    actions = None  # 禁用批量操作
+    
+    # 排除创建者字段，使其不在表单中显示
+    exclude = ['creator']
+    
+    def word_count(self, obj):
+        return obj.english_words.count()
+    word_count.short_description = '关联单词数量'
+    
+    def save_model(self, request, obj, form, change):
+        # 如果是新创建的标签，自动设置创建者为当前用户
+        if not obj.pk:
+            obj.creator = request.user
+        super().save_model(request, obj, form, change)
+    
+    def get_queryset(self, request):
+        qs = super().get_queryset(request).select_related('creator')
+        # 如果是超级用户，显示所有标签
+        if request.user.is_superuser:
+            return qs
+        # 否则只显示当前用户创建的标签
+        return qs.filter(creator=request.user)
+    
+    def has_change_permission(self, request, obj=None):
+        # 如果是超级用户，允许编辑所有标签
+        if request.user.is_superuser:
+            return True
+        # 如果obj存在，只允许创建者编辑
+        if obj is not None and obj.creator != request.user:
+            return False
+        return True
+    
+    def has_delete_permission(self, request, obj=None):
+        # 同样应用编辑权限规则到删除权限
+        return self.has_change_permission(request, obj)
 
 @admin.register(models.EnglishWordMedia)
 class EnglishWordMediaAdmin(admin.ModelAdmin):
