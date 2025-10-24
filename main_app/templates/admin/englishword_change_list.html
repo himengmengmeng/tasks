@@ -6,7 +6,7 @@
         {% block object-tools-items %}
             {% if has_add_permission %}
                 <a href="{% url 'admin:englishword_import_excel' %}" class="addlink" style="background-color: #417690; margin-right: 10px;">
-                    从Excel导入单词
+                    batch process
                 </a>
                 {{ block.super }}
             {% endif %}
