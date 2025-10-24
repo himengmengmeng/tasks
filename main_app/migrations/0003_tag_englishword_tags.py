@@ -22,8 +22,8 @@ class Migration(migrations.Migration):
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='创建者')),
             ],
             options={
-                'verbose_name': '标签',
-                'verbose_name_plural': '标签',
+                'verbose_name': 'Tags',
+                'verbose_name_plural': 'Tags',
                 'ordering': ['-created_at'],
                 'unique_together': {('name', 'creator')},
             },

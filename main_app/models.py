@@ -14,8 +14,8 @@ class Tag(models.Model):
     )
     
     class Meta:
-        verbose_name = "标签"
-        verbose_name_plural = "标签"
+        verbose_name = "Tags"
+        verbose_name_plural = "Tags"
         ordering = ['-created_at']
         # 确保同一用户不能创建重复的标签名称
         unique_together = ['name', 'creator']
