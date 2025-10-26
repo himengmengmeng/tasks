@@ -4,63 +4,63 @@ from django.utils import timezone
 
 class Goal(models.Model):
     STATUS_CHOICES = [
-        ('not_started', '未开启'),
-        ('in_progress', '进行中'),
-        ('blocked', '遇到阻碍'),
-        ('resolved', '已解决'),
+        ('not_started', 'Not Started'),
+        ('in_progress', 'In Progress'),
+        ('blocked', 'Blocked'),
+        ('resolved', 'Resolved'),
     ]
     
     # 新增：优先级选项
     PRIORITY_CHOICES = [
-        ('very_high', '极高重要性'),
-        ('high', '高重要性'),
-        ('medium', '中等重要性'),
-        ('low', '低重要性'),
-        ('very_low', '极低/无关重要性'),
+        ('very_high', 'very_high'),
+        ('high', 'high'),
+        ('medium', 'medium'),
+        ('low', 'low'),
+        ('very_low', 'very_low'),
     ]
     
     # 新增：紧急性选项
     URGENCY_CHOICES = [
-        ('very_high', '极急'),
-        ('high', '高紧急性'),
-        ('medium', '中等紧急性'),
-        ('low', '低紧急性'),
-        ('very_low', '极低/无时间限制'),
+        ('very_high', 'very_high'),
+        ('high', 'high'),
+        ('medium', 'medium'),
+        ('low', 'low'),
+        ('very_low', 'very_low'),
     ]
     
-    title = models.CharField(max_length=255, verbose_name='标题')
-    description = models.TextField(blank=True, null=True, verbose_name='描述')
-    notes = models.TextField(blank=True, null=True, verbose_name='备注')
-    created_time = models.DateTimeField(default=timezone.now, verbose_name='创建时间')
+    title = models.CharField(max_length=255, verbose_name='Goal Title')
+    description = models.TextField(blank=True, null=True, verbose_name='description')
+    notes = models.TextField(blank=True, null=True, verbose_name='notes')
+    created_time = models.DateTimeField(default=timezone.now, verbose_name='created time')
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name='创建者'
+        verbose_name='Creator'
     )
     status = models.CharField(
         max_length=20, 
         choices=STATUS_CHOICES, 
         default='not_started',
-        verbose_name='状态'
+        verbose_name='Status'
     )
     # 新增：优先级字段
     priority = models.CharField(
         max_length=20,
         choices=PRIORITY_CHOICES,
         default='medium',
-        verbose_name='优先级'
+        verbose_name='Priority'
     )
     # 新增：紧急性字段
     urgency = models.CharField(
         max_length=20,
         choices=URGENCY_CHOICES,
         default='medium',
-        verbose_name='紧急性'
+        verbose_name='Urgency'
     )
     
     class Meta:
-        verbose_name = '目标'
-        verbose_name_plural = '目标'
+        verbose_name = 'Goal'
+        verbose_name_plural = 'Goals'
         ordering = ['-created_time']  # 新增：按创建时间倒序排列
     
     def __str__(self):
@@ -68,69 +68,69 @@ class Goal(models.Model):
 
 class Task(models.Model):
     STATUS_CHOICES = [
-        ('not_done', '未完成'),
-        ('done', '已完成'),
+        ('not_done', 'Not Done'),
+        ('done', 'Done'),
     ]
     
     # 新增：优先级选项（与Goal相同）
     PRIORITY_CHOICES = [
-        ('very_high', '极高重要性'),
-        ('high', '高重要性'),
-        ('medium', '中等重要性'),
-        ('low', '低重要性'),
-        ('very_low', '极低/无关重要性'),
+        ('very_high', 'very_high'),
+        ('high', 'high'),
+        ('medium', 'medium'),
+        ('low', 'low'),
+        ('very_low', 'very_low'),
     ]
     
     # 新增：紧急性选项（与Goal相同）
     URGENCY_CHOICES = [
-        ('very_high', '极急'),
-        ('high', '高紧急性'),
-        ('medium', '中等紧急性'),
-        ('low', '低紧急性'),
-        ('very_low', '极低/无时间限制'),
+        ('very_high', 'very_high'),
+        ('high', 'high'),
+        ('medium', 'medium'),
+        ('low', 'low'),
+        ('very_low', 'very low'),
     ]
     
-    name = models.CharField(max_length=255, verbose_name='任务名称')
-    description = models.TextField(blank=True, null=True, verbose_name='描述')
+    name = models.CharField(max_length=255, verbose_name='Task Title')
+    description = models.TextField(blank=True, null=True, verbose_name='Description')
     goal = models.ForeignKey(
         Goal, 
         on_delete=models.SET_NULL,  # 修改为 SET_NULL
         null=True,                  # 允许数据库存储 NULL
         blank=True,                 # 允许表单提交空值
         related_name='tasks',
-        verbose_name='关联目标'
+        verbose_name='Associated Goal'
     )
     # 新增：task创建者字段
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name='任务创建者'
+        verbose_name='Task Creator'
     )
-    created_time = models.DateTimeField(default=timezone.now, verbose_name='建立时间')
+    created_time = models.DateTimeField(default=timezone.now, verbose_name='Creation Time')
     status = models.CharField(
         max_length=20, 
         choices=STATUS_CHOICES, 
         default='not_done',
-        verbose_name='状态'
+        verbose_name='Status'
     )
     # 新增：优先级字段
     priority = models.CharField(
         max_length=20,
         choices=PRIORITY_CHOICES,
         default='medium',
-        verbose_name='优先级'
+        verbose_name='Priority'
     )
     # 新增：紧急性字段
     urgency = models.CharField(
         max_length=20,
         choices=URGENCY_CHOICES,
         default='medium',
-        verbose_name='紧急性'
+        verbose_name='Urgency'
     )
     
     class Meta:
-        verbose_name = '任务'
-        verbose_name_plural = '任务'
+        verbose_name = 'Task'
+        verbose_name_plural = 'Tasks'
         ordering = ['-created_time']  # 新增：按创建时间倒序排列
     
     def __str__(self):
@@ -144,13 +144,13 @@ class GoalAttachment(models.Model):
     )
     file = models.FileField(
         upload_to='goal_attachments/%Y/%m/%d/',
-        verbose_name='附件'
+        verbose_name='attachment'
     )
     uploaded_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
-        verbose_name = '目标附件'
-        verbose_name_plural = '目标附件'
+        verbose_name = 'Goal Attachment'
+        verbose_name_plural = 'Goal Attachments'
 
 class TaskAttachment(models.Model):
     task = models.ForeignKey(
@@ -160,10 +160,10 @@ class TaskAttachment(models.Model):
     )
     file = models.FileField(
         upload_to='task_attachments/%Y/%m/%d/',
-        verbose_name='附件'
+        verbose_name='attachment'
     )
     uploaded_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
-        verbose_name = '任务附件'
-        verbose_name_plural = '任务附件'
+        verbose_name = 'Task Attachment'
+        verbose_name_plural = 'Task Attachments'
