@@ -5,12 +5,13 @@ from django.core.validators import FileExtensionValidator
 
 class Tag(models.Model):
     """标签模型"""
-    name = models.CharField(max_length=100, verbose_name="tag Name")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="created Time")
+    name = models.CharField(max_length=100, verbose_name="标签名称")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name="creator"
+        verbose_name="创建者",
+        related_name='main_app_tags'  # <font color="red">**修改点：设置唯一的related_name**</font>
     )
     
     class Meta:
@@ -32,9 +33,10 @@ class EnglishWord(models.Model):
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name="Creator"
+        verbose_name="Creator",
+        related_name='main_app_english_words'  # <font color="red">**修改点：设置唯一的related_name**</font>
     )
-    # <font color="red">**新增点：添加多对多标签关系**</font>
+    # 新增点：添加多对多标签关系
     tags = models.ManyToManyField(
         Tag, 
         blank=True, 
@@ -43,17 +45,17 @@ class EnglishWord(models.Model):
     )
     
     class Meta:
-        verbose_name = "Words"
-        verbose_name_plural = "Words"
+        verbose_name = "English Word"
+        verbose_name_plural = "English Words"
         ordering = ['-created_at']
     
     def __str__(self):
         return self.title
     
-    # <font color="red">**新增点：获取标签名称的便捷方法**</font>
+    # 新增点：获取标签名称的便捷方法
     def get_tag_names(self):
         return ", ".join([tag.name for tag in self.tags.all()])
-    get_tag_names.short_description = "Tags"
+    get_tag_names.short_description = "标签"
 
 class EnglishWordMedia(models.Model):
     
@@ -71,7 +73,7 @@ class EnglishWordMedia(models.Model):
         )],
         verbose_name="attached File"
     )
-    uploaded_at = models.DateTimeField(auto_now_add=True, verbose_name="Uploaded At")
+    uploaded_at = models.DateTimeField(auto_now_add=True, verbose_name="上传时间")
     
     class Meta:
         verbose_name = "media File"

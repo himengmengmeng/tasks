@@ -2,6 +2,38 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
+# <font color="red">**新增点：创建Tag模型**</font>
+class Tag(models.Model):
+    """标签模型"""
+    name = models.CharField(max_length=100, verbose_name="Tag Name")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created Time")
+    creator = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.CASCADE, 
+        verbose_name="Creator",
+        related_name='goal_app_tags'  # <font color="red">**修改点：设置唯一的related_name**</font>
+    )
+    
+    class Meta:
+        verbose_name = "Tags"
+        verbose_name_plural = "Tags"
+        ordering = ['-created_at']
+        # 确保同一用户不能创建重复的标签名称
+        unique_together = ['name', 'creator']
+    
+    def __str__(self):
+        return self.name
+    
+    # 新增：获取关联目标数量的便捷方法
+    def goal_count(self):
+        return self.goals.count()
+    goal_count.short_description = '关联目标数量'
+    
+    # 新增：获取关联任务数量的便捷方法
+    def task_count(self):
+        return self.tasks.count()
+    task_count.short_description = '关联任务数量'
+
 class Goal(models.Model):
     STATUS_CHOICES = [
         ('not_started', 'Not Started'),
@@ -35,7 +67,8 @@ class Goal(models.Model):
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name='Creator'
+        verbose_name='Creator',
+        related_name='goal_app_goals'  # <font color="red">**修改点：设置唯一的related_name**</font>
     )
     status = models.CharField(
         max_length=20, 
@@ -57,14 +90,26 @@ class Goal(models.Model):
         default='medium',
         verbose_name='Urgency'
     )
+    # <font color="red">**新增点：添加多对多标签关系**</font>
+    tags = models.ManyToManyField(
+        Tag, 
+        blank=True, 
+        related_name='goals',
+        verbose_name="Tags"
+    )
     
     class Meta:
         verbose_name = 'Goal'
         verbose_name_plural = 'Goals'
-        ordering = ['-created_time']  # 新增：按创建时间倒序排列
+        ordering = ['-created_time']
     
     def __str__(self):
         return self.title
+    
+    # <font color="red">**新增点：获取标签名称的便捷方法**</font>
+    def get_tag_names(self):
+        return ", ".join([tag.name for tag in self.tags.all()])
+    get_tag_names.short_description = "Tags"
 
 class Task(models.Model):
     STATUS_CHOICES = [
@@ -94,12 +139,13 @@ class Task(models.Model):
     description = models.TextField(blank=True, null=True, verbose_name='Description')
     goal = models.ForeignKey(
         Goal, 
-        on_delete=models.SET_NULL,  # 修改为 SET_NULL
-        null=True,                  # 允许数据库存储 NULL
-        blank=True,                 # 允许表单提交空值
-        related_name='tasks',
-        verbose_name='Associated Goal'
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name='Associated Goal',
+        related_name='goal_app_tasks'  
     )
+
     # 新增：task创建者字段
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
@@ -127,14 +173,26 @@ class Task(models.Model):
         default='medium',
         verbose_name='Urgency'
     )
+    # <font color="red">**新增点：添加多对多标签关系**</font>
+    tags = models.ManyToManyField(
+        Tag, 
+        blank=True, 
+        related_name='tasks',
+        verbose_name="Tags"
+    )
     
     class Meta:
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
-        ordering = ['-created_time']  # 新增：按创建时间倒序排列
+        ordering = ['-created_time']
     
     def __str__(self):
         return self.name
+    
+    # <font color="red">**新增点：获取标签名称的便捷方法**</font>
+    def get_tag_names(self):
+        return ", ".join([tag.name for tag in self.tags.all()])
+    get_tag_names.short_description = "Tags"
 
 class GoalAttachment(models.Model):
     goal = models.ForeignKey(
