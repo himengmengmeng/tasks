@@ -1,0 +1,116 @@
+.ui-sortable-handle {
+  cursor: auto;
+}
+
+.ui-sortable-helper {
+  opacity: 0.8;
+  border-top: 1px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.ui-sortable-helper > td,
+.ui-sortable-helper > th {
+  border-bottom: none;
+}
+
+.inline-related.tabular .ui-sortable > tr {
+  padding: 0;
+}
+
+.inline-related.tabular .ui-sortable-placeholder > td {
+  display: none;
+}
+
+.admin-ordering-field-input-wrapper {
+  cursor: row-resize;
+}
+
+.admin-ordering-field .admin-ordering-field-input-wrapper {
+  display: table-cell;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.admin-ordering-field .admin-ordering-field-input-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+  background-image: url("admin_ordering-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.admin-ordering-field .admin-ordering-field-input-wrapper input {
+  margin-bottom: 0;
+}
+
+.admin-ordering-field.admin-ordering-field-hide-input
+  .admin-ordering-field-input-wrapper
+  input {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.inline-related .admin-ordering-field {
+  cursor: auto;
+}
+
+.inline-related.has_original .admin-ordering-field-input-wrapper,
+.inline-related .has_original .admin-ordering-field-input-wrapper {
+  cursor: row-resize;
+}
+
+.inline-related
+  .admin-ordering-field
+  .admin-ordering-field-input-wrapper::before {
+  opacity: 0.3;
+}
+
+.inline-related.has_original
+  .admin-ordering-field
+  .admin-ordering-field-input-wrapper::before,
+.inline-related
+  .has_original
+  .admin-ordering-field
+  .admin-ordering-field-input-wrapper::before {
+  opacity: 1;
+}
+
+.admin-ordering-field-up-down-buttons {
+  display: inline-flex;
+  flex-direction: column;
+  width: 14px;
+  height: 20px;
+  vertical-align: middle;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.admin-ordering-field-up-button, .admin-ordering-field-down-button {
+  height: 0;
+  width: 0;
+}
+
+.admin-ordering-field-up-button {
+  /* CSS triangle */
+  border-right : 7px solid transparent;
+  border-bottom : 7px solid #CCCCCC;
+  border-left : 7px solid transparent;
+}
+
+.admin-ordering-field-down-button {
+  /* CSS triangle */
+  border-right : 7px solid transparent;
+  border-top : 7px solid #CCCCCC;
+  border-left : 7px solid transparent;
+}
+
+.admin-ordering-field-up-button:hover, .admin-ordering-field-down-button:hover {
+  border-top-color: #999;
+  border-bottom-color: #999;
+}

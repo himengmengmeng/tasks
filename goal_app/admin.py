@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django import forms
 from .models import Goal, Task, GoalAttachment, TaskAttachment, Tag  # <font color="red">**新增点：导入Tag模型**</font>
+from django.apps import apps
+
 
 # <font color="red">**新增点：标签过滤器**</font>
 class TagFilter(admin.SimpleListFilter):
@@ -228,3 +230,7 @@ class TaskAttachmentAdmin(admin.ModelAdmin):
 #         if request.user.is_superuser:
 #             return qs
 #         return qs.filter(task__goal__creator=request.user)
+
+
+
+
