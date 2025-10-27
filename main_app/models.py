@@ -5,12 +5,12 @@ from django.core.validators import FileExtensionValidator
 
 class Tag(models.Model):
     """标签模型"""
-    name = models.CharField(max_length=100, verbose_name="标签名称")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    name = models.CharField(max_length=100, verbose_name="tag Name")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="created Time")
     creator = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name="创建者"
+        verbose_name="creator"
     )
     
     class Meta:
@@ -43,8 +43,8 @@ class EnglishWord(models.Model):
     )
     
     class Meta:
-        verbose_name = "English Word"
-        verbose_name_plural = "English Words"
+        verbose_name = "Words"
+        verbose_name_plural = "Words"
         ordering = ['-created_at']
     
     def __str__(self):
@@ -53,7 +53,7 @@ class EnglishWord(models.Model):
     # <font color="red">**新增点：获取标签名称的便捷方法**</font>
     def get_tag_names(self):
         return ", ".join([tag.name for tag in self.tags.all()])
-    get_tag_names.short_description = "标签"
+    get_tag_names.short_description = "Tags"
 
 class EnglishWordMedia(models.Model):
     
@@ -71,7 +71,7 @@ class EnglishWordMedia(models.Model):
         )],
         verbose_name="attached File"
     )
-    uploaded_at = models.DateTimeField(auto_now_add=True, verbose_name="上传时间")
+    uploaded_at = models.DateTimeField(auto_now_add=True, verbose_name="Uploaded At")
     
     class Meta:
         verbose_name = "media File"

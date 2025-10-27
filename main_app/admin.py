@@ -81,7 +81,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
     
     def media_count(self, obj):
         return obj.media_files.count()
-    media_count.short_description = '附件数量'
+    media_count.short_description = "Media Count"
     
     def save_model(self, request, obj, form, change):
         # 如果是新创建的单词，自动设置创建者为当前用户
@@ -128,7 +128,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
         # 创建工作簿和工作表
         wb = openpyxl.Workbook()
         ws = wb.active
-        ws.title = "English Words"
+        ws.title = "Words"
         
         # <font color="red">**修改点：在导出中添加标签列**</font>
         headers = ['单词', '解释', '备注', '标签', '创建者', '创建时间']
@@ -209,7 +209,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
     def import_excel_view(self, request):
         """处理Excel文件导入的视图"""
         context = {
-            'title': '导入英文单词',
+            'title': 'impoert English Words from Excel',
             **self.admin_site.each_context(request),
         }
         
@@ -304,7 +304,7 @@ class TagAdmin(admin.ModelAdmin):
     
     def word_count(self, obj):
         return obj.english_words.count()
-    word_count.short_description = '关联单词数量'
+    word_count.short_description = 'Associated Word Count'
     
     def save_model(self, request, obj, form, change):
         # 如果是新创建的标签，自动设置创建者为当前用户
@@ -333,7 +333,10 @@ class TagAdmin(admin.ModelAdmin):
         # 同样应用编辑权限规则到删除权限
         return self.has_change_permission(request, obj)
 
-@admin.register(models.EnglishWordMedia)
+
+
+# 先去掉了这部分的展示
+#@admin.register(models.EnglishWordMedia)
 class EnglishWordMediaAdmin(admin.ModelAdmin):
     """英文单词多媒体文件管理"""
     list_display = ['word', 'file', 'uploaded_at']
