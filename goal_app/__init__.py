@@ -15,7 +15,7 @@ def custom_get_app_list(self, request, app_label=None):
         for app in app_list:
             if app['app_label'] == 'goal_app':
                 # 定义模型顺序
-                model_order = ['tag', 'goal', 'task', 'goalattachment', 'taskattachment']
+                model_order = ['tag', 'task', 'goal', 'goalattachment', 'taskattachment']
                 
                 # 创建新的模型列表，按照指定顺序
                 ordered_models = []
