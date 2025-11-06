@@ -196,6 +196,9 @@ class TagAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         # 同样应用编辑权限规则到删除权限
         return self.has_change_permission(request, obj)
+    
+
+
 
 # 新增：注册附件模型到admin（可选）
 '''
