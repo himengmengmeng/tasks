@@ -1,0 +1,14 @@
+# FastAPI 核心
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# 认证和安全性
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# 数据验证
+pydantic==2.7.4
+pydantic-settings==2.0.0
+
+# 其他工具
+python-multipart==0.0.6
