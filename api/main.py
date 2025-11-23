@@ -25,7 +25,7 @@ app = FastAPI(title="Goals'APIs", version="1.0.0")
 # CORS 配置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:8000", "http://127.0.0.1:8000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -36,9 +36,10 @@ app.include_router(auth_module.router, prefix="/api/auth", tags=["Authentication
 app.include_router(goals_module.router, prefix="/api/goals", tags=["Goals Management"])
 app.include_router(words_module.router, prefix="/api/words", tags=["Vocabulary"])
 
+
 @app.get("/")
 async def root():
-    return {"message": "FastAPI 服务运行正常", "status": "healthy"}
+    return {"message": "FastAPI functions well", "status": "healthy"}
 
 if __name__ == "__main__":
     import uvicorn

@@ -18,7 +18,7 @@ else:
 
 router = APIRouter()
 
-# Pydantic 模型（保持不变）
+# Pydantic 模型
 class GoalBase(BaseModel):
     title: str
     description: Optional[str] = None

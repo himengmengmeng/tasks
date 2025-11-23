@@ -96,7 +96,7 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
 
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
-    """用户登录，获取 JWT token"""
+    """user login to get access token"""
     # 使用异步认证函数
     user = await async_authenticate(username=form_data.username, password=form_data.password)
     if not user:
@@ -113,7 +113,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
 @router.post("/test-token", response_model=UserResponse)
 async def test_token(current_user: User = Depends(get_current_active_user)) -> UserResponse:
-    """测试 token 有效性"""
+    """test token's validity"""
     return UserResponse(
         id=current_user.id,
         username=current_user.username,
