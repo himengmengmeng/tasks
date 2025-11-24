@@ -5,9 +5,9 @@ from pydantic import BaseModel
 from datetime import datetime
 from django.core.exceptions import ObjectDoesNotExist
 from asgiref.sync import sync_to_async
-
 from .auth import get_current_active_user
 from goal_app.models import Goal, Tag
+
 
 # 🎯 专业类型检查配置
 if TYPE_CHECKING:
@@ -18,7 +18,7 @@ else:
 
 router = APIRouter()
 
-# Pydantic 模型
+# Pydantic 模型（保持不变）
 class GoalBase(BaseModel):
     title: str
     description: Optional[str] = None
@@ -135,7 +135,7 @@ async def get_goal(
         )
         return await async_goal_to_response(goal)
     except ObjectDoesNotExist:
-        raise HTTPException(status_code=404, detail="目标不存在")
+        raise HTTPException(status_code=404, detail="Goal doesn't exist")
 
 @router.post("/", response_model=GoalResponse)
 async def create_goal(
