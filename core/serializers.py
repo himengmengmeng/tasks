@@ -1,3 +1,4 @@
+
 from djoser.serializers import UserCreateSerializer as BaseUserCreateSerializer
 from rest_framework import serializers
 from core.models import User
@@ -32,5 +33,7 @@ class UserSerializer(BaseUserSerializer):
         instance.age = validated_data.get('age', instance.age)
         instance.save()
         return instance
+
+
 
 

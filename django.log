@@ -495,3 +495,68 @@ INFO 2025-11-29 15:23:17,828 apps 20338 8683061824 Main app signals imported
 INFO 2025-11-29 15:23:17,828 apps 20339 8683061824 Main app signals imported
 INFO 2025-11-29 15:23:19,545 apps 20392 8683061824 Main app signals imported
 INFO 2025-11-29 15:23:19,545 apps 20393 8683061824 Main app signals imported
+INFO 2025-11-29 16:23:13,639 apps 25734 8683061824 Main app signals imported
+INFO 2025-11-29 16:23:13,639 apps 25733 8683061824 Main app signals imported
+INFO 2025-11-29 16:23:13,722 autoreload 87963 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:23:14,005 apps 25735 8683061824 Main app signals imported
+INFO 2025-11-29 16:23:14,009 autoreload 25735 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:23:16,129 apps 25791 8683061824 Main app signals imported
+INFO 2025-11-29 16:23:16,184 apps 25792 8683061824 Main app signals imported
+INFO 2025-11-29 16:40:46,190 apps 56444 8683061824 Main app signals imported
+INFO 2025-11-29 16:40:46,190 apps 56445 8683061824 Main app signals imported
+INFO 2025-11-29 16:40:46,227 autoreload 25735 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:40:46,447 apps 56455 8683061824 Main app signals imported
+INFO 2025-11-29 16:40:46,450 autoreload 56455 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:40:47,952 apps 56574 8683061824 Main app signals imported
+INFO 2025-11-29 16:40:47,952 apps 56575 8683061824 Main app signals imported
+INFO 2025-11-29 16:41:17,489 apps 57401 8683061824 Main app signals imported
+INFO 2025-11-29 16:41:17,489 apps 57402 8683061824 Main app signals imported
+INFO 2025-11-29 16:41:17,521 autoreload 56455 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:41:17,743 apps 57405 8683061824 Main app signals imported
+INFO 2025-11-29 16:41:17,746 autoreload 57405 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:41:19,236 apps 57554 8683061824 Main app signals imported
+INFO 2025-11-29 16:41:19,243 apps 57555 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:20,703 apps 59297 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:20,703 apps 59298 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:20,800 autoreload 57405 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:42:21,018 apps 59305 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:21,021 autoreload 59305 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:42:22,496 apps 59352 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:22,515 apps 59351 8683061824 Main app signals imported
+INFO 2025-11-29 16:42:24,342 basehttp 59305 6190247936 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
+INFO 2025-11-29 16:42:24,364 basehttp 59305 6190247936 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 16:47:33,393 apps 68456 8683061824 Main app signals imported
+INFO 2025-11-29 16:47:33,450 apps 68455 8683061824 Main app signals imported
+INFO 2025-11-29 16:47:33,639 autoreload 59305 8683061824 /Users/meng/Desktop/Goals/core/models.py changed, reloading.
+INFO 2025-11-29 16:47:33,850 apps 68474 8683061824 Main app signals imported
+INFO 2025-11-29 16:47:33,854 autoreload 68474 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:47:35,843 apps 68599 8683061824 Main app signals imported
+INFO 2025-11-29 16:47:35,865 apps 68631 8683061824 Main app signals imported
+INFO 2025-11-29 16:48:58,546 autoreload 68474 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:48:58,865 apps 71017 8683061824 Main app signals imported
+INFO 2025-11-29 16:48:58,865 apps 71018 8683061824 Main app signals imported
+INFO 2025-11-29 16:48:58,865 apps 71021 8683061824 Main app signals imported
+INFO 2025-11-29 16:48:58,868 autoreload 71021 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:49:00,900 apps 71077 8683061824 Main app signals imported
+INFO 2025-11-29 16:49:00,965 apps 71078 8683061824 Main app signals imported
+INFO 2025-11-29 16:50:54,735 autoreload 71021 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:50:54,913 apps 74450 8683061824 Main app signals imported
+INFO 2025-11-29 16:50:54,913 apps 74449 8683061824 Main app signals imported
+INFO 2025-11-29 16:50:54,965 apps 74453 8683061824 Main app signals imported
+INFO 2025-11-29 16:50:54,969 autoreload 74453 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:50:56,995 apps 74508 8683061824 Main app signals imported
+INFO 2025-11-29 16:50:56,995 apps 74507 8683061824 Main app signals imported
+INFO 2025-11-29 16:51:42,536 apps 75842 8683061824 Main app signals imported
+INFO 2025-11-29 16:51:42,588 autoreload 74453 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 16:51:42,605 apps 75843 8683061824 Main app signals imported
+INFO 2025-11-29 16:51:42,813 apps 75844 8683061824 Main app signals imported
+INFO 2025-11-29 16:51:42,818 autoreload 75844 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 16:51:44,159 apps 75859 8683061824 Main app signals imported
+INFO 2025-11-29 16:51:44,202 apps 75860 8683061824 Main app signals imported
+INFO 2025-11-29 17:08:40,331 apps 5874 8683061824 Main app signals imported
+INFO 2025-11-29 17:08:40,331 apps 5873 8683061824 Main app signals imported
+INFO 2025-11-29 17:08:42,851 apps 5931 8683061824 Main app signals imported
+INFO 2025-11-29 17:08:42,857 apps 5932 8683061824 Main app signals imported
+INFO 2025-11-29 17:49:48,089 basehttp 75844 6212415488 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
+INFO 2025-11-29 17:49:48,089 basehttp 75844 6195589120 - Broken pipe from ('127.0.0.1', 55141)
+INFO 2025-11-29 17:49:48,109 basehttp 75844 6212415488 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
