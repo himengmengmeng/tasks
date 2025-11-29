@@ -560,3 +560,162 @@ INFO 2025-11-29 17:08:42,857 apps 5932 8683061824 Main app signals imported
 INFO 2025-11-29 17:49:48,089 basehttp 75844 6212415488 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
 INFO 2025-11-29 17:49:48,089 basehttp 75844 6195589120 - Broken pipe from ('127.0.0.1', 55141)
 INFO 2025-11-29 17:49:48,109 basehttp 75844 6212415488 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 17:50:22,683 apps 79017 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:22,683 apps 79018 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:24,954 apps 79077 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:24,958 apps 79076 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:28,958 apps 79277 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:28,958 apps 79276 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:29,314 apps 79278 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:29,314 apps 79279 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:30,043 apps 79285 8683061824 Main app signals imported
+INFO 2025-11-29 17:50:30,043 apps 79286 8683061824 Main app signals imported
+INFO 2025-11-29 19:00:53,003 basehttp 75844 6195589120 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
+INFO 2025-11-29 19:00:53,022 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 19:00:54,023 basehttp 75844 6195589120 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 19:00:54,044 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 19:00:55,272 basehttp 75844 6195589120 "GET /admin/goal_app/task/ HTTP/1.1" 200 39839
+INFO 2025-11-29 19:00:55,298 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 19:00:56,188 basehttp 75844 6195589120 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27982
+INFO 2025-11-29 19:00:56,213 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 19:00:56,920 basehttp 75844 6195589120 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-29 19:00:58,499 basehttp 75844 6195589120 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-29 21:03:24,368 basehttp 75844 6195589120 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-29 21:03:27,484 basehttp 75844 6195589120 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
+INFO 2025-11-29 21:03:27,508 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:05:00,847 basehttp 75844 6195589120 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-29 21:05:00,877 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:12:23,414 basehttp 75844 6195589120 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-29 21:12:23,433 basehttp 75844 6195589120 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:28:17,845 autoreload 75844 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 21:28:18,306 apps 59727 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:18,306 apps 59729 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:18,306 apps 59728 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:18,310 autoreload 59729 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 21:28:21,693 apps 59828 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:21,693 apps 59829 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:29,803 autoreload 59729 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 21:28:30,117 apps 60107 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:30,120 autoreload 60107 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 21:28:30,166 apps 60112 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:30,166 apps 60113 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:31,488 apps 60163 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:31,488 apps 60164 8683061824 Main app signals imported
+INFO 2025-11-29 21:28:53,340 basehttp 60107 6170636288 "GET /admin/core/user/ HTTP/1.1" 200 27178
+INFO 2025-11-29 21:28:53,371 basehttp 60107 6170636288 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:28:56,429 basehttp 60107 6170636288 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27982
+INFO 2025-11-29 21:28:56,452 basehttp 60107 6170636288 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:28:57,078 basehttp 60107 6170636288 "GET /admin/goal_app/task/ HTTP/1.1" 200 39839
+INFO 2025-11-29 21:28:57,100 basehttp 60107 6170636288 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:32:23,918 apps 67010 8683061824 Main app signals imported
+INFO 2025-11-29 21:32:23,918 apps 67011 8683061824 Main app signals imported
+INFO 2025-11-29 21:32:25,899 apps 67083 8683061824 Main app signals imported
+INFO 2025-11-29 21:32:25,976 apps 67084 8683061824 Main app signals imported
+INFO 2025-11-29 21:32:48,331 basehttp 60107 6170636288 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:32:48,357 basehttp 60107 6170636288 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:36:25,879 apps 74094 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:25,879 apps 74093 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:28,170 apps 74162 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:28,170 apps 74163 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:57,535 apps 75075 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:57,551 apps 75076 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:59,301 apps 75098 8683061824 Main app signals imported
+INFO 2025-11-29 21:36:59,301 apps 75099 8683061824 Main app signals imported
+INFO 2025-11-29 21:39:47,634 apps 81272 8683061824 Main app signals imported
+INFO 2025-11-29 21:39:47,788 apps 81273 8683061824 Main app signals imported
+INFO 2025-11-29 21:39:47,789 autoreload 81273 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 21:39:51,945 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:39:51,967 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:39:53,007 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:39:53,030 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:39:53,775 basehttp 81273 6200684544 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-29 21:39:55,070 basehttp 81273 6200684544 "GET /admin/goal_app/task/ HTTP/1.1" 200 39840
+INFO 2025-11-29 21:39:55,096 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:39:55,547 basehttp 81273 6200684544 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27982
+INFO 2025-11-29 21:39:55,569 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:39:56,388 basehttp 81273 6200684544 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-29 21:39:56,412 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:40:20,414 apps 82494 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:43,519 apps 85319 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:44,392 apps 85453 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:44,769 apps 85456 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:45,196 apps 85461 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:46,191 apps 85507 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:46,567 apps 85536 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:47,602 apps 85568 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:47,950 apps 85610 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:48,915 apps 85616 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:49,987 apps 85630 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:50,320 apps 85658 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:51,395 apps 85667 8683061824 Main app signals imported
+INFO 2025-11-29 21:41:55,699 apps 85861 8683061824 Main app signals imported
+INFO 2025-11-29 21:42:00,518 apps 86061 8683061824 Main app signals imported
+INFO 2025-11-29 21:42:03,724 apps 86107 8683061824 Main app signals imported
+INFO 2025-11-29 21:42:20,544 basehttp 81273 6200684544 "GET /admin/ HTTP/1.1" 200 24950
+INFO 2025-11-29 21:43:49,531 auth 86107 6151712768 User created successfully: string
+INFO 2025-11-29 21:43:59,138 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27717
+INFO 2025-11-29 21:43:59,161 basehttp 81273 6217510912 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-11-29 21:43:59,172 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:44:26,805 basehttp 81273 6200684544 "GET /admin/core/user/6/change/ HTTP/1.1" 200 39877
+INFO 2025-11-29 21:44:26,823 basehttp 81273 6217510912 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-11-29 21:44:26,823 basehttp 81273 6234337280 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-11-29 21:44:26,831 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:44:26,851 basehttp 81273 6217510912 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-11-29 21:44:26,851 basehttp 81273 6200684544 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-11-29 21:47:28,768 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27717
+INFO 2025-11-29 21:47:28,788 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:47:30,132 basehttp 81273 6200684544 "GET /admin/core/user/6/change/ HTTP/1.1" 200 39876
+INFO 2025-11-29 21:47:30,152 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:47:33,462 basehttp 81273 6200684544 "GET /admin/core/user/6/delete/ HTTP/1.1" 200 22457
+INFO 2025-11-29 21:47:34,831 basehttp 81273 6200684544 "POST /admin/core/user/6/delete/ HTTP/1.1" 302 0
+INFO 2025-11-29 21:47:34,849 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27330
+INFO 2025-11-29 21:47:34,866 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2025-11-29 21:47:58,732 auth 86107 6151712768 User creation validation failed: {'username': [ErrorDetail(string='Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.', code='invalid')]}
+INFO 2025-11-29 21:48:04,331 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:48:04,344 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:48:05,962 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:48:05,976 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:48:07,067 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:48:07,080 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:48:07,962 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-29 21:48:07,978 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2025-11-29 21:48:10,621 auth 86107 6151712768 User creation validation failed: {'username': [ErrorDetail(string='Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.', code='invalid')]}
+WARNING 2025-11-29 21:48:44,276 auth 86107 6151712768 User creation validation failed: {'password': [ErrorDetail(string='The password is too similar to the first name.', code='password_too_similar'), ErrorDetail(string='This password is too short. It must contain at least 8 characters.', code='password_too_short')]}
+INFO 2025-11-29 21:49:30,384 auth 86107 6151712768 User created successfully: fastapi
+INFO 2025-11-29 21:49:35,829 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27718
+INFO 2025-11-29 21:49:35,848 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:49:37,330 basehttp 81273 6200684544 "GET /admin/core/user/7/change/ HTTP/1.1" 200 39880
+INFO 2025-11-29 21:49:37,353 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 21:55:24,922 apps 9868 8683061824 Main app signals imported
+INFO 2025-11-29 21:55:29,127 apps 9969 8683061824 Main app signals imported
+INFO 2025-11-29 21:59:09,425 apps 16366 8683061824 Main app signals imported
+INFO 2025-11-29 21:59:11,845 apps 16529 8683061824 Main app signals imported
+INFO 2025-11-29 21:59:57,906 apps 17868 8683061824 Main app signals imported
+INFO 2025-11-29 21:59:59,956 apps 17922 8683061824 Main app signals imported
+INFO 2025-11-29 22:00:12,739 basehttp 81273 6200684544 "GET /admin/core/user/7/change/ HTTP/1.1" 200 39880
+INFO 2025-11-29 22:00:12,771 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:00:16,399 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27718
+INFO 2025-11-29 22:00:16,432 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:01:05,196 apps 19804 8683061824 Main app signals imported
+INFO 2025-11-29 22:01:06,872 apps 19850 8683061824 Main app signals imported
+INFO 2025-11-29 22:01:10,931 basehttp 81273 6200684544 "GET /admin/core/user/2/change/ HTTP/1.1" 200 40241
+INFO 2025-11-29 22:01:10,954 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:01:13,898 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27718
+INFO 2025-11-29 22:01:13,933 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:01:17,325 basehttp 81273 6200684544 "GET /admin/core/user/2/change/ HTTP/1.1" 200 40241
+INFO 2025-11-29 22:01:17,357 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:04:40,703 auth 19850 6189608960 User 7 updated fields: ['email', 'first_name', 'last_name', 'position', 'age']
+INFO 2025-11-29 22:04:46,781 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27713
+INFO 2025-11-29 22:04:46,806 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:06:48,961 basehttp 81273 6200684544 "GET /admin/core/user/3/change/ HTTP/1.1" 200 40116
+INFO 2025-11-29 22:06:48,992 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:06:53,161 basehttp 81273 6200684544 "POST /admin/core/user/3/change/ HTTP/1.1" 302 0
+INFO 2025-11-29 22:06:53,186 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27907
+INFO 2025-11-29 22:06:53,218 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:07:09,169 basehttp 81273 6200684544 "GET /admin/core/user/3/change/ HTTP/1.1" 200 40108
+INFO 2025-11-29 22:07:09,195 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:07:13,547 basehttp 81273 6200684544 "POST /admin/core/user/3/change/ HTTP/1.1" 302 0
+INFO 2025-11-29 22:07:13,581 basehttp 81273 6200684544 "GET /admin/core/user/ HTTP/1.1" 200 27907
+INFO 2025-11-29 22:07:13,608 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:09:14,566 apps 34216 8683061824 Main app signals imported
+INFO 2025-11-29 22:09:16,683 apps 34273 8683061824 Main app signals imported

@@ -1,27 +1,47 @@
-
 from djoser.serializers import UserCreateSerializer as BaseUserCreateSerializer
 from rest_framework import serializers
-from core.models import User
-from djoser.serializers import UserSerializer as BaseUserSerializer
-from rest_framework import generics  # 确保导入了 generics
+from django.contrib.auth import get_user_model
+from rest_framework.validators import UniqueValidator
 
-
-
-
+User = get_user_model()
 
 class UserCreateSerializer(BaseUserCreateSerializer):
-    position = serializers.CharField(max_length=255, required=False)
-    age = serializers.IntegerField(required=False)
+    position = serializers.CharField(max_length=255, required=False, default="")
+    age = serializers.IntegerField(required=False, allow_null=True)
+    email = serializers.EmailField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all())]
+    )
 
     class Meta(BaseUserCreateSerializer.Meta):
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'position', 'age', 'password']
+        extra_kwargs = {
+            'password': {'write_only': True},
+            'email': {'required': True}
+        }
 
-class UserSerializer(BaseUserSerializer):
+    def create(self, validated_data):
+        # 确保邮箱被设置
+        if 'email' not in validated_data:
+            raise serializers.ValidationError({"email": "This field is required."})
+        
+        user = User.objects.create_user(
+            username=validated_data['username'],
+            email=validated_data['email'],
+            password=validated_data['password'],
+            first_name=validated_data.get('first_name', ''),
+            last_name=validated_data.get('last_name', ''),
+            position=validated_data.get('position', ''),
+            age=validated_data.get('age', None)
+        )
+        return user
+
+class UserSerializer(BaseUserCreateSerializer):
     position = serializers.CharField(max_length=255, required=False)
-    age = serializers.IntegerField(required=False)
+    age = serializers.IntegerField(required=False, allow_null=True)
 
-    class Meta(BaseUserSerializer.Meta):
+    class Meta(BaseUserCreateSerializer.Meta):
         model = User
         fields = ['id', 'username', 'email', 'first_name', 'last_name', 'position', 'age']
 
