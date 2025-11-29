@@ -719,3 +719,57 @@ INFO 2025-11-29 22:07:13,581 basehttp 81273 6200684544 "GET /admin/core/user/ HT
 INFO 2025-11-29 22:07:13,608 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2025-11-29 22:09:14,566 apps 34216 8683061824 Main app signals imported
 INFO 2025-11-29 22:09:16,683 apps 34273 8683061824 Main app signals imported
+INFO 2025-11-29 22:09:54,607 apps 35442 8683061824 Main app signals imported
+INFO 2025-11-29 22:09:56,073 apps 35488 8683061824 Main app signals imported
+INFO 2025-11-29 22:25:00,315 basehttp 81273 6200684544 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47946
+INFO 2025-11-29 22:25:00,337 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:25:40,731 basehttp 81273 6200684544 "GET /admin/main_app/englishword/72/change/ HTTP/1.1" 200 30327
+INFO 2025-11-29 22:25:40,758 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:26:04,101 basehttp 81273 6200684544 "GET /admin/main_app/englishword/72/change/ HTTP/1.1" 302 0
+INFO 2025-11-29 22:26:04,119 basehttp 81273 6200684544 "GET /admin/ HTTP/1.1" 200 24955
+INFO 2025-11-29 22:26:06,296 basehttp 81273 6200684544 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-29 22:26:06,326 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:26:49,171 basehttp 81273 6200684544 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-29 22:26:49,198 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:30:29,088 basehttp 81273 6200684544 "GET /admin/goal_app/task/ HTTP/1.1" 200 40367
+INFO 2025-11-29 22:30:29,116 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:34:13,644 apps 78220 8683061824 Main app signals imported
+INFO 2025-11-29 22:34:16,545 apps 78323 8683061824 Main app signals imported
+INFO 2025-11-29 22:42:23,076 apps 92495 8683061824 Main app signals imported
+INFO 2025-11-29 22:42:26,293 apps 92586 8683061824 Main app signals imported
+INFO 2025-11-29 22:42:34,481 basehttp 81273 6200684544 "GET /admin/goal_app/task/ HTTP/1.1" 200 40366
+INFO 2025-11-29 22:42:34,505 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:42:48,987 apps 93232 8683061824 Main app signals imported
+INFO 2025-11-29 22:42:50,390 apps 93374 8683061824 Main app signals imported
+INFO 2025-11-29 22:42:54,028 basehttp 81273 6200684544 "GET /admin/goal_app/task/ HTTP/1.1" 200 40366
+INFO 2025-11-29 22:42:54,060 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:44:50,635 apps 96894 8683061824 Main app signals imported
+INFO 2025-11-29 22:44:52,800 apps 96949 8683061824 Main app signals imported
+INFO 2025-11-29 22:46:01,147 apps 98919 8683061824 Main app signals imported
+INFO 2025-11-29 22:46:03,423 apps 99072 8683061824 Main app signals imported
+INFO 2025-11-29 22:46:24,320 apps 99607 8683061824 Main app signals imported
+INFO 2025-11-29 22:46:25,301 apps 99730 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:49,651 apps 8014 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:49,929 apps 8015 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:50,853 apps 8027 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:51,935 apps 8119 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:52,287 apps 8126 8683061824 Main app signals imported
+INFO 2025-11-29 22:50:54,382 apps 8272 8683061824 Main app signals imported
+INFO 2025-11-29 22:51:12,336 apps 8741 8683061824 Main app signals imported
+INFO 2025-11-29 22:51:13,901 apps 8791 8683061824 Main app signals imported
+INFO 2025-11-29 22:52:24,504 apps 11056 8683061824 Main app signals imported
+INFO 2025-11-29 22:55:48,898 apps 17098 8683061824 Main app signals imported
+INFO 2025-11-29 22:55:50,087 apps 17145 8683061824 Main app signals imported
+INFO 2025-11-29 22:56:32,948 basehttp 81273 6200684544 "GET /admin/goal_app/task/ HTTP/1.1" 200 40365
+INFO 2025-11-29 22:56:32,995 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:56:34,398 basehttp 81273 6200684544 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27982
+INFO 2025-11-29 22:56:34,432 basehttp 81273 6200684544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 22:58:26,568 autoreload 81273 8683061824 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2025-11-29 22:58:26,845 apps 21788 8683061824 Main app signals imported
+INFO 2025-11-29 22:58:26,845 apps 21746 8683061824 Main app signals imported
+INFO 2025-11-29 22:58:26,848 autoreload 21788 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-29 22:58:28,905 apps 21829 8683061824 Main app signals imported
+INFO 2025-11-29 23:07:12,491 basehttp 21788 6191411200 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27983
+INFO 2025-11-29 23:07:12,506 basehttp 21788 6191411200 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 23:07:14,494 basehttp 21788 6191411200 "GET /admin/goal_app/task/ HTTP/1.1" 200 40364
+INFO 2025-11-29 23:07:14,514 basehttp 21788 6191411200 "GET /admin/jsi18n/ HTTP/1.1" 200 3343

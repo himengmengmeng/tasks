@@ -32,10 +32,9 @@ app = FastAPI(
     redoc_url="/redoc",
     # 新增配置：隐藏 Schemas 部分
     swagger_ui_parameters={
-        "defaultModelsExpandDepth": -1,  # 隐藏所有模型
-        #"docExpansion": "none",          # 默认折叠所有部分
-    
-    
+        "deepLinking": True,
+        "displayRequestDuration": True,
+        "defaultModelsExpandDepth": -1 , # 隐藏 Schemas 部
     }
 )
 
