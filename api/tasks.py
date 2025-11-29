@@ -1,6 +1,4 @@
-
-
-# === tasks.py - 任务管理接口（完整版）===
+# === tasks.py - 修复更新函数的异步问题 ===
 from typing import TYPE_CHECKING, List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel
@@ -87,6 +85,12 @@ async def async_task_to_response(task) -> TaskResponse:
         goal_title=goal_title
     )
 
+# 修复：创建同步函数来获取目标
+def sync_get_goal(goal_id, creator):
+    """同步函数：获取目标"""
+    from goal_app.models import Goal
+    return Goal.objects.filter(id=goal_id, creator=creator).first()
+
 @router.get("/", response_model=TaskListResponse)
 async def list_tasks(
     skip: int = Query(0, ge=0, description="跳过记录数"),
@@ -163,9 +167,7 @@ async def create_task(
         # 验证目标是否存在（如果提供了goal_id）
         goal = None
         if task_data.goal_id:
-            goal = await sync_to_async(Goal.objects.filter)(
-                id=task_data.goal_id, creator=current_user
-            ).first()
+            goal = await sync_to_async(sync_get_goal)(task_data.goal_id, current_user)
             if not goal:
                 raise HTTPException(status_code=404, detail="关联的目标不存在")
         
@@ -228,9 +230,8 @@ async def update_task(
             if task_data.goal_id == 0:  # 特殊值表示清空关联
                 update_fields['goal'] = None
             else:
-                goal = await sync_to_async(Goal.objects.filter)(
-                    id=task_data.goal_id, creator=current_user
-                ).first()
+                # 修复：使用 sync_to_async 包装同步的目标获取操作
+                goal = await sync_to_async(sync_get_goal)(task_data.goal_id, current_user)
                 if not goal:
                     raise HTTPException(status_code=404, detail="关联的目标不存在")
                 update_fields['goal'] = goal

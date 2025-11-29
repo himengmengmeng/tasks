@@ -355,3 +355,69 @@ INFO 2025-11-29 09:16:21,144 apps 98926 8683061824 Main app signals imported
 INFO 2025-11-29 09:16:21,144 apps 98925 8683061824 Main app signals imported
 INFO 2025-11-29 09:16:22,973 apps 98978 8683061824 Main app signals imported
 INFO 2025-11-29 09:16:23,081 apps 98979 8683061824 Main app signals imported
+INFO 2025-11-29 09:17:26,653 apps 1220 8683061824 Main app signals imported
+INFO 2025-11-29 09:17:26,653 apps 1219 8683061824 Main app signals imported
+INFO 2025-11-29 09:17:27,457 apps 1227 8683061824 Main app signals imported
+INFO 2025-11-29 09:17:27,457 apps 1228 8683061824 Main app signals imported
+INFO 2025-11-29 09:17:35,920 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-29 09:17:35,941 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:17:37,077 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-29 09:17:37,099 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:23:45,453 apps 12385 8683061824 Main app signals imported
+INFO 2025-11-29 09:23:45,453 apps 12384 8683061824 Main app signals imported
+INFO 2025-11-29 09:23:47,014 apps 12402 8683061824 Main app signals imported
+INFO 2025-11-29 09:23:47,014 apps 12403 8683061824 Main app signals imported
+INFO 2025-11-29 09:25:50,250 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-29 09:25:50,280 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:25:52,498 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40362
+INFO 2025-11-29 09:25:52,526 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:25:55,758 basehttp 87963 6195884032 "GET /admin/goal_app/task/31/change/ HTTP/1.1" 200 31008
+INFO 2025-11-29 09:25:55,778 basehttp 87963 6246363136 "GET /static/admin/css/autocomplete.css HTTP/1.1" 304 0
+INFO 2025-11-29 09:25:55,780 basehttp 87963 6263189504 "GET /static/admin/js/autocomplete.js HTTP/1.1" 304 0
+INFO 2025-11-29 09:25:55,780 basehttp 87963 6280015872 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 304 0
+INFO 2025-11-29 09:25:55,780 basehttp 87963 6246363136 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-11-29 09:25:55,780 basehttp 87963 6212710400 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-11-29 09:25:55,782 basehttp 87963 6263189504 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-11-29 09:25:55,783 basehttp 87963 6229536768 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-11-29 09:25:55,788 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:26:20,099 basehttp 87963 6195884032 "GET /admin/autocomplete/?app_label=goal_app&model_name=task&field_name=goal HTTP/1.1" 200 84
+INFO 2025-11-29 09:26:20,309 basehttp 87963 6195884032 "GET /__debug__/history_sidebar/?store_id=a2c093979eb641c886d1965e68660c73 HTTP/1.1" 200 10279
+INFO 2025-11-29 09:28:24,078 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40352
+INFO 2025-11-29 09:28:24,102 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:32:18,215 apps 27392 8683061824 Main app signals imported
+INFO 2025-11-29 09:32:18,215 apps 27393 8683061824 Main app signals imported
+INFO 2025-11-29 09:32:20,008 apps 27449 8683061824 Main app signals imported
+INFO 2025-11-29 09:32:20,109 apps 27450 8683061824 Main app signals imported
+INFO 2025-11-29 09:34:29,603 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40351
+INFO 2025-11-29 09:34:29,625 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:35:13,923 apps 32519 8683061824 Main app signals imported
+INFO 2025-11-29 09:35:13,923 apps 32520 8683061824 Main app signals imported
+INFO 2025-11-29 09:35:16,975 apps 32689 8683061824 Main app signals imported
+INFO 2025-11-29 09:35:16,978 apps 32690 8683061824 Main app signals imported
+INFO 2025-11-29 09:36:46,478 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40338
+INFO 2025-11-29 09:36:46,497 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:47,935 basehttp 87963 6195884032 "GET /admin/goal_app/task/31/change/ HTTP/1.1" 200 30960
+INFO 2025-11-29 09:36:47,966 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:50,771 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-29 09:36:50,799 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:51,420 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-29 09:36:51,444 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:54,451 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40336
+INFO 2025-11-29 09:36:54,474 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:58,555 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-29 09:36:58,579 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:36:59,945 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40337
+INFO 2025-11-29 09:36:59,969 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:37:01,211 basehttp 87963 6195884032 "GET /admin/goal_app/task/31/change/ HTTP/1.1" 200 30960
+INFO 2025-11-29 09:37:01,234 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:37:02,686 basehttp 87963 6195884032 "GET /admin/autocomplete/?app_label=goal_app&model_name=task&field_name=goal HTTP/1.1" 200 84
+INFO 2025-11-29 09:37:02,895 basehttp 87963 6195884032 "GET /__debug__/history_sidebar/?store_id=37dcb2c870044383a1c352b7be1bf9b6 HTTP/1.1" 200 10279
+INFO 2025-11-29 09:37:04,470 basehttp 87963 6195884032 "GET /admin/goal_app/goal/10/delete/?_to_field=id&_popup=1 HTTP/1.1" 200 17254
+INFO 2025-11-29 09:37:04,476 basehttp 87963 6195884032 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2025-11-29 09:37:11,897 basehttp 87963 6195884032 "GET /admin/autocomplete/?app_label=goal_app&model_name=task&field_name=goal HTTP/1.1" 200 84
+INFO 2025-11-29 09:37:12,106 basehttp 87963 6195884032 "GET /__debug__/history_sidebar/?store_id=bf3bd8bb26854f79954635177b621c18 HTTP/1.1" 200 10279
+INFO 2025-11-29 09:37:14,261 basehttp 87963 6195884032 "GET /admin/autocomplete/?app_label=goal_app&model_name=task&field_name=goal HTTP/1.1" 200 84
+INFO 2025-11-29 09:37:14,470 basehttp 87963 6195884032 "GET /__debug__/history_sidebar/?store_id=02cd5385cc3d457aa93e554fbe0b7163 HTTP/1.1" 200 10279
+INFO 2025-11-29 09:37:16,022 basehttp 87963 6195884032 "POST /admin/goal_app/task/31/change/ HTTP/1.1" 302 0
+INFO 2025-11-29 09:37:16,065 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 40546
+INFO 2025-11-29 09:37:16,091 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
