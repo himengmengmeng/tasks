@@ -1,0 +1,30 @@
+
+
+/* static/swagger-dark-theme.css */
+/* 暗黑主题主色调 */
+.swagger-ui {
+    filter: invert(0.9) hue-rotate(180deg);
+}
+/* 恢复图片、代码块等元素的颜色，避免过度反转 */
+.swagger-ui img,
+.swagger-ui .model-box-control:focus + .model-box,
+.swagger-ui .model-jump-to-path {
+    filter: invert(1) hue-rotate(180deg);
+}
+/* 调整顶部信息栏样式 */
+.swagger-ui .information-container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+/* 优化输入框等在暗黑模式下的显示 */
+.swagger-ui input[type="text"],
+.swagger-ui textarea {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+/* 针对模型示例代码块的调整（如果之前已隐藏模型可忽略） */
+.swagger-ui .model-example {
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+}

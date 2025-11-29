@@ -1,12 +1,11 @@
-# === goals.py 的 TYPE_CHECKING 版本 ===
+# === goals.py 的完整版本 ===
 from typing import TYPE_CHECKING, List, Optional
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel
 from datetime import datetime
 from django.core.exceptions import ObjectDoesNotExist
 from asgiref.sync import sync_to_async
 from .auth import get_current_active_user
-from goal_app.models import Goal, Tag
 
 
 # 🎯 专业类型检查配置
@@ -18,7 +17,7 @@ else:
 
 router = APIRouter()
 
-# Pydantic 模型（保持不变）
+# Pydantic 模型
 class GoalBase(BaseModel):
     title: str
     description: Optional[str] = None
@@ -55,11 +54,8 @@ class GoalListResponse(BaseModel):
     size: int
 
 # 创建异步的 goal_to_response 函数
-async def async_goal_to_response(goal: Goal) -> GoalResponse:
+async def async_goal_to_response(goal) -> GoalResponse:
     """异步将 Django Goal 模型转换为 Pydantic 响应模型"""
-    # 预取相关对象以避免 N+1 查询
-    creator_id = goal.creator_id  # 直接使用外键字段，避免额外查询
-    
     # 异步获取标签
     tags_queryset = goal.tags.all()
     tag_names = await sync_to_async(list)(tags_queryset.values_list('name', flat=True))
@@ -72,7 +68,7 @@ async def async_goal_to_response(goal: Goal) -> GoalResponse:
         status=goal.status,
         priority=goal.priority,
         urgency=goal.urgency,
-        creator_id=creator_id,  # 使用预取的外键
+        creator_id=goal.creator_id,
         created_time=goal.created_time,
         tags=tag_names
     )
@@ -95,8 +91,9 @@ async def list_goals(
     priority: Optional[str] = Query(None, description="按优先级过滤"),
     current_user: User = Depends(get_current_active_user)
 ) -> GoalListResponse:
-    """fetch goals with optional filters"""
+    """获取目标列表"""
     # 构建查询
+    from goal_app.models import Goal
     queryset = Goal.objects.filter(creator=current_user)
     
     # 应用过滤器
@@ -129,36 +126,117 @@ async def get_goal(
 ) -> GoalResponse:
     """获取单个目标详情"""
     try:
+        from goal_app.models import Goal
+        
         # 异步获取目标
         goal = await sync_to_async(Goal.objects.select_related('creator').prefetch_related('tags').get)(
             id=goal_id, creator=current_user
         )
         return await async_goal_to_response(goal)
     except ObjectDoesNotExist:
-        raise HTTPException(status_code=404, detail="Goal doesn't exist")
+        raise HTTPException(status_code=404, detail="目标不存在")
 
-@router.post("/", response_model=GoalResponse)
+@router.post("/", response_model=GoalResponse, status_code=status.HTTP_201_CREATED)
 async def create_goal(
     goal_data: GoalCreate,
     current_user: User = Depends(get_current_active_user)
 ) -> GoalResponse:
     """创建新目标"""
-    # 异步创建目标
-    goal = await sync_to_async(Goal.objects.create)(
-        title=goal_data.title,
-        description=goal_data.description,
-        notes=goal_data.notes,
-        status=goal_data.status,
-        priority=goal_data.priority,
-        urgency=goal_data.urgency,
-        creator=current_user
-    )
-    
-    # 异步添加标签
-    if goal_data.tags:
-        tags = await sync_to_async(list)(Tag.objects.filter(id__in=goal_data.tags))
-        await sync_to_async(goal.tags.set)(tags)
-    
-    # 重新获取以包含所有关系
-    goal = await sync_to_async(Goal.objects.select_related('creator').prefetch_related('tags').get)(id=goal.id)
-    return await async_goal_to_response(goal)
+    try:
+        from goal_app.models import Goal
+        from goal_app.models import Tag as GoalTag
+        
+        # 异步创建目标
+        goal = await sync_to_async(Goal.objects.create)(
+            title=goal_data.title,
+            description=goal_data.description,
+            notes=goal_data.notes,
+            status=goal_data.status,
+            priority=goal_data.priority,
+            urgency=goal_data.urgency,
+            creator=current_user
+        )
+        
+        # 异步添加标签
+        if goal_data.tags:
+            tags = await sync_to_async(list)(GoalTag.objects.filter(
+                id__in=goal_data.tags, creator=current_user
+            ))
+            await sync_to_async(goal.tags.set)(tags)
+        
+        # 重新获取以包含所有关系
+        goal = await sync_to_async(Goal.objects.select_related('creator').prefetch_related('tags').get)(id=goal.id)
+        return await async_goal_to_response(goal)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"创建目标失败: {str(e)}")
+
+@router.put("/{goal_id}", response_model=GoalResponse)
+async def update_goal(
+    goal_id: int,
+    goal_data: GoalUpdate,
+    current_user: User = Depends(get_current_active_user)
+) -> GoalResponse:
+    """更新目标"""
+    try:
+        from goal_app.models import Goal
+        from goal_app.models import Tag as GoalTag
+        
+        goal = await sync_to_async(Goal.objects.select_related('creator').prefetch_related('tags').get)(
+            id=goal_id, creator=current_user
+        )
+        
+        # 更新字段
+        update_fields = {}
+        if goal_data.title is not None:
+            update_fields['title'] = goal_data.title
+        if goal_data.description is not None:
+            update_fields['description'] = goal_data.description
+        if goal_data.notes is not None:
+            update_fields['notes'] = goal_data.notes
+        if goal_data.status is not None:
+            update_fields['status'] = goal_data.status
+        if goal_data.priority is not None:
+            update_fields['priority'] = goal_data.priority
+        if goal_data.urgency is not None:
+            update_fields['urgency'] = goal_data.urgency
+        
+        # 执行更新
+        for field, value in update_fields.items():
+            setattr(goal, field, value)
+        await sync_to_async(goal.save)()
+        
+        # 更新标签
+        if goal_data.tags is not None:
+            tags = await sync_to_async(list)(GoalTag.objects.filter(
+                id__in=goal_data.tags, creator=current_user
+            ))
+            await sync_to_async(goal.tags.set)(tags)
+        
+        # 重新获取以包含所有关系
+        goal = await sync_to_async(Goal.objects.select_related('creator').prefetch_related('tags').get)(id=goal.id)
+        return await async_goal_to_response(goal)
+    except ObjectDoesNotExist:
+        raise HTTPException(status_code=404, detail="目标不存在")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"更新目标失败: {str(e)}")
+
+@router.delete("/{goal_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_goal(
+    goal_id: int,
+    current_user: User = Depends(get_current_active_user)
+):
+    """删除目标"""
+    try:
+        from goal_app.models import Goal
+        
+        goal = await sync_to_async(Goal.objects.get)(
+            id=goal_id, creator=current_user
+        )
+        
+        await sync_to_async(goal.delete)()
+        
+        return None
+    except ObjectDoesNotExist:
+        raise HTTPException(status_code=404, detail="目标不存在")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"删除目标失败: {str(e)}")

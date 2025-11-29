@@ -1,0 +1,357 @@
+INFO 2025-11-26 22:28:00,053 apps 87962 8683061824 Main app signals imported
+INFO 2025-11-26 22:28:00,110 apps 87963 8683061824 Main app signals imported
+INFO 2025-11-26 22:28:00,113 autoreload 87963 8683061824 Watching for file changes with StatReloader
+INFO 2025-11-26 22:28:03,625 apps 88164 8683061824 Main app signals imported
+INFO 2025-11-26 22:29:13,396 apps 90166 8683061824 Main app signals imported
+INFO 2025-11-26 22:29:16,070 apps 90240 8683061824 Main app signals imported
+INFO 2025-11-26 22:29:19,220 apps 90390 8683061824 Main app signals imported
+INFO 2025-11-26 22:29:20,283 apps 90406 8683061824 Main app signals imported
+INFO 2025-11-26 22:30:35,231 apps 92596 8683061824 Main app signals imported
+INFO 2025-11-26 22:30:37,745 apps 92656 8683061824 Main app signals imported
+INFO 2025-11-26 22:30:45,892 apps 92947 8683061824 Main app signals imported
+INFO 2025-11-26 22:30:47,376 apps 92967 8683061824 Main app signals imported
+INFO 2025-11-26 22:31:18,571 apps 93912 8683061824 Main app signals imported
+INFO 2025-11-26 22:31:20,855 apps 93966 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:06,304 apps 97062 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:06,656 apps 97064 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:07,755 apps 97069 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:22,122 apps 97480 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:23,801 apps 97526 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:52,501 apps 98390 8683061824 Main app signals imported
+INFO 2025-11-26 22:33:54,314 apps 98442 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:02,120 apps 98711 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:03,191 apps 98727 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:10,850 apps 98980 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:12,060 apps 99022 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:24,018 apps 99377 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:25,204 apps 99388 8683061824 Main app signals imported
+INFO 2025-11-26 22:34:27,495 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-26 22:34:27,526 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:34:29,400 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-26 22:34:29,430 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:34:30,014 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-26 22:34:30,848 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-26 22:34:30,872 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:34:31,814 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39842
+INFO 2025-11-26 22:34:31,838 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:34:32,576 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-26 22:34:33,336 basehttp 87963 6195884032 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-26 22:34:33,358 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:34:34,107 basehttp 87963 6195884032 "GET /admin/auth/group/ HTTP/1.1" 200 24009
+INFO 2025-11-26 22:34:34,137 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:35:55,469 apps 2583 8683061824 Main app signals imported
+INFO 2025-11-26 22:38:50,060 apps 7682 8683061824 Main app signals imported
+INFO 2025-11-26 22:38:50,060 apps 7722 8683061824 Main app signals imported
+INFO 2025-11-26 22:38:52,385 apps 7809 8683061824 Main app signals imported
+INFO 2025-11-26 22:38:52,385 apps 7808 8683061824 Main app signals imported
+INFO 2025-11-26 22:40:00,837 apps 9775 8683061824 Main app signals imported
+INFO 2025-11-26 22:40:00,837 apps 9776 8683061824 Main app signals imported
+INFO 2025-11-26 22:40:02,818 apps 9833 8683061824 Main app signals imported
+INFO 2025-11-26 22:40:02,819 apps 9834 8683061824 Main app signals imported
+INFO 2025-11-26 22:43:34,372 apps 16078 8683061824 Main app signals imported
+INFO 2025-11-26 22:43:34,372 apps 16079 8683061824 Main app signals imported
+INFO 2025-11-26 22:43:36,075 apps 16091 8683061824 Main app signals imported
+INFO 2025-11-26 22:43:36,173 apps 16092 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:18,573 apps 17347 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:18,574 apps 17346 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:20,359 apps 17406 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:20,359 apps 17405 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:30,853 apps 17739 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:30,929 apps 17740 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:31,202 apps 17741 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:32,356 apps 17754 8683061824 Main app signals imported
+INFO 2025-11-26 22:44:32,392 apps 17755 8683061824 Main app signals imported
+INFO 2025-11-26 22:45:10,705 basehttp 87963 6195884032 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-26 22:45:10,735 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 22:52:15,808 apps 31255 8683061824 Main app signals imported
+INFO 2025-11-26 22:52:15,808 apps 31256 8683061824 Main app signals imported
+INFO 2025-11-26 22:52:18,303 apps 31414 8683061824 Main app signals imported
+INFO 2025-11-26 22:52:18,306 apps 31415 8683061824 Main app signals imported
+INFO 2025-11-26 22:54:32,948 apps 35329 8683061824 Main app signals imported
+INFO 2025-11-26 22:54:32,948 apps 35330 8683061824 Main app signals imported
+INFO 2025-11-26 22:54:34,394 apps 35348 8683061824 Main app signals imported
+INFO 2025-11-26 22:54:34,394 apps 35349 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:02,789 apps 43204 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:02,789 apps 43205 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:05,457 apps 43365 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:05,457 apps 43366 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:37,394 apps 44322 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:37,394 apps 44321 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:39,074 apps 44366 8683061824 Main app signals imported
+INFO 2025-11-26 22:59:39,075 apps 44365 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:02,168 apps 45012 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:02,168 apps 45013 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:04,153 apps 45066 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:04,153 apps 45065 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:39,028 apps 46074 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:39,028 apps 46073 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:40,993 apps 46127 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:40,993 apps 46126 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:59,518 apps 46711 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:59,518 apps 46712 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:59,766 apps 46714 8683061824 Main app signals imported
+INFO 2025-11-26 23:00:59,766 apps 46713 8683061824 Main app signals imported
+INFO 2025-11-26 23:01:00,999 apps 46725 8683061824 Main app signals imported
+INFO 2025-11-26 23:01:01,313 apps 46748 8683061824 Main app signals imported
+INFO 2025-11-26 23:02:39,466 apps 49684 8683061824 Main app signals imported
+INFO 2025-11-26 23:02:39,467 apps 49687 8683061824 Main app signals imported
+INFO 2025-11-26 23:02:41,032 apps 49734 8683061824 Main app signals imported
+INFO 2025-11-26 23:02:41,032 apps 49735 8683061824 Main app signals imported
+INFO 2025-11-26 23:05:05,186 apps 53928 8683061824 Main app signals imported
+INFO 2025-11-26 23:05:05,186 apps 53929 8683061824 Main app signals imported
+INFO 2025-11-26 23:05:06,599 apps 53947 8683061824 Main app signals imported
+INFO 2025-11-26 23:05:06,599 apps 53948 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:25,799 apps 61584 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:25,799 apps 61585 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:27,376 apps 61737 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:27,376 apps 61738 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:48,634 apps 62274 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:48,634 apps 62273 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:50,325 apps 62409 8683061824 Main app signals imported
+INFO 2025-11-26 23:09:50,325 apps 62410 8683061824 Main app signals imported
+INFO 2025-11-26 23:10:01,925 apps 62753 8683061824 Main app signals imported
+INFO 2025-11-26 23:10:01,925 apps 62754 8683061824 Main app signals imported
+INFO 2025-11-26 23:10:03,174 apps 62797 8683061824 Main app signals imported
+INFO 2025-11-26 23:10:03,174 apps 62796 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:20,033 apps 68563 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:20,033 apps 68564 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:22,619 apps 68618 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:22,619 apps 68619 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:35,721 apps 69105 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:35,823 apps 69108 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:37,062 apps 69123 8683061824 Main app signals imported
+INFO 2025-11-26 23:13:37,062 apps 69124 8683061824 Main app signals imported
+INFO 2025-11-26 23:16:14,850 apps 73684 8683061824 Main app signals imported
+INFO 2025-11-26 23:16:14,850 apps 73685 8683061824 Main app signals imported
+INFO 2025-11-26 23:16:17,512 apps 73845 8683061824 Main app signals imported
+INFO 2025-11-26 23:16:17,514 apps 73844 8683061824 Main app signals imported
+INFO 2025-11-26 23:17:16,386 apps 75523 8683061824 Main app signals imported
+INFO 2025-11-26 23:17:16,386 apps 75522 8683061824 Main app signals imported
+INFO 2025-11-26 23:17:18,478 apps 75579 8683061824 Main app signals imported
+INFO 2025-11-26 23:17:18,478 apps 75580 8683061824 Main app signals imported
+INFO 2025-11-26 23:17:38,669 basehttp 87963 6195884032 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-26 23:17:38,696 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 23:17:39,747 basehttp 87963 6195884032 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-26 23:17:39,768 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 23:17:41,017 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47551
+INFO 2025-11-26 23:17:41,044 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 23:17:41,619 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-26 23:17:42,286 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-26 23:17:42,318 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 23:17:42,827 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39841
+INFO 2025-11-26 23:17:42,853 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-26 23:17:43,255 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-27 09:41:36,795 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25041
+INFO 2025-11-27 09:41:36,827 basehttp 87963 6212710400 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,828 basehttp 87963 6195884032 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,829 basehttp 87963 6229536768 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,829 basehttp 87963 6246363136 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,829 basehttp 87963 6263189504 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,829 basehttp 87963 6212710400 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,829 basehttp 87963 6195884032 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,830 basehttp 87963 6280015872 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,830 basehttp 87963 6229536768 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,832 basehttp 87963 6229536768 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,842 basehttp 87963 6229536768 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,852 basehttp 87963 6229536768 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,852 basehttp 87963 6195884032 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-11-27 09:41:36,854 basehttp 87963 6195884032 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+WARNING 2025-11-27 11:38:09,213 log 87963 6195884032 Not Found: /device-check-tool/
+WARNING 2025-11-27 11:38:09,215 basehttp 87963 6195884032 "GET /device-check-tool/ HTTP/1.1" 404 16077
+WARNING 2025-11-27 11:38:10,545 log 87963 6195884032 Not Found: /device-check-tool/
+WARNING 2025-11-27 11:38:10,545 basehttp 87963 6195884032 "GET /device-check-tool/ HTTP/1.1" 404 16077
+WARNING 2025-11-27 11:38:12,294 log 87963 6195884032 Not Found: /device-check-tool/
+WARNING 2025-11-27 11:38:12,295 basehttp 87963 6195884032 "GET /device-check-tool/ HTTP/1.1" 404 16077
+WARNING 2025-11-27 11:38:53,763 log 87963 6195884032 Not Found: /device-check-tool/
+WARNING 2025-11-27 11:38:53,765 basehttp 87963 6195884032 "GET /device-check-tool/ HTTP/1.1" 404 16077
+INFO 2025-11-28 11:36:09,176 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 302 0
+INFO 2025-11-28 11:36:09,199 basehttp 87963 6195884032 "GET /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 200 17740
+INFO 2025-11-28 11:36:09,222 basehttp 87963 6195884032 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,222 basehttp 87963 6212710400 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,223 basehttp 87963 6246363136 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,223 basehttp 87963 6229536768 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,223 basehttp 87963 6263189504 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,224 basehttp 87963 6195884032 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,224 basehttp 87963 6212710400 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,225 basehttp 87963 6229536768 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,225 basehttp 87963 6212710400 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-11-28 11:36:09,225 basehttp 87963 6229536768 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-11-28 11:37:00,808 basehttp 87963 6229536768 "POST /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 200 17902
+INFO 2025-11-28 11:37:11,800 basehttp 87963 6229536768 "POST /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 200 17911
+INFO 2025-11-28 14:35:15,390 basehttp 87963 6195884032 "POST /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 200 17911
+INFO 2025-11-28 14:35:23,796 basehttp 87963 6195884032 "POST /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 302 0
+INFO 2025-11-28 14:35:23,819 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 14:35:23,846 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:26,885 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 14:35:26,917 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:27,735 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39840
+INFO 2025-11-28 14:35:27,764 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:29,186 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 14:35:30,067 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 14:35:30,095 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:38,949 basehttp 87963 6195884032 "GET /admin/main_app/englishword/66/change/ HTTP/1.1" 200 29277
+INFO 2025-11-28 14:35:38,962 basehttp 87963 6212710400 "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,963 basehttp 87963 6229536768 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,963 basehttp 87963 6246363136 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,963 basehttp 87963 6263189504 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,966 basehttp 87963 6263189504 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,966 basehttp 87963 6246363136 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,967 basehttp 87963 6263189504 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,972 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:38,992 basehttp 87963 6195884032 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,995 basehttp 87963 6195884032 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,995 basehttp 87963 6263189504 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:38,995 basehttp 87963 6246363136 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:41,754 basehttp 87963 6246363136 "POST /admin/main_app/englishword/66/change/ HTTP/1.1" 302 0
+INFO 2025-11-28 14:35:41,849 basehttp 87963 6246363136 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47791
+INFO 2025-11-28 14:35:41,871 basehttp 87963 6246363136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:41,876 basehttp 87963 6246363136 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-11-28 14:35:43,204 basehttp 87963 6246363136 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47551
+INFO 2025-11-28 14:35:43,233 basehttp 87963 6246363136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:46,411 basehttp 87963 6246363136 "GET /admin/main_app/englishword/2/change/ HTTP/1.1" 200 30598
+INFO 2025-11-28 14:35:46,437 basehttp 87963 6246363136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:48,311 basehttp 87963 6246363136 "POST /admin/main_app/englishword/2/change/ HTTP/1.1" 302 0
+INFO 2025-11-28 14:35:48,422 basehttp 87963 6246363136 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47763
+INFO 2025-11-28 14:35:48,453 basehttp 87963 6246363136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 14:35:49,615 basehttp 87963 6246363136 "GET /admin/main_app/englishword/51/change/ HTTP/1.1" 200 29258
+INFO 2025-11-28 14:35:49,647 basehttp 87963 6246363136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 18:49:18,128 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27979
+INFO 2025-11-28 18:49:18,167 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 18:49:19,077 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 18:49:19,101 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 18:49:19,878 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 18:49:20,799 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 18:49:20,820 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 18:49:21,977 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-28 18:49:22,640 basehttp 87963 6195884032 "GET /admin/core/user/ HTTP/1.1" 200 27177
+INFO 2025-11-28 18:49:22,663 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 19:29:16,093 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 19:29:16,125 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 19:29:18,230 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39842
+INFO 2025-11-28 19:29:18,260 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 19:29:19,308 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 19:29:19,981 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 19:29:20,011 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 20:52:33,330 basehttp 87963 6195884032 "GET /admin/main_app/englishword/63/change/ HTTP/1.1" 200 29326
+INFO 2025-11-28 20:52:33,348 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 20:52:35,352 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:20:35,699 basehttp 87963 6195884032 "GET /admin/main_app/englishword/65/change/ HTTP/1.1" 200 29270
+INFO 2025-11-28 23:20:35,719 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:20:37,645 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:20:37,671 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:20:43,166 basehttp 87963 6195884032 "GET /admin/main_app/englishword/52/change/ HTTP/1.1" 200 29253
+INFO 2025-11-28 23:20:43,193 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:20:51,466 basehttp 87963 6195884032 "POST /admin/main_app/englishword/52/change/ HTTP/1.1" 302 0
+INFO 2025-11-28 23:20:51,577 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47786
+INFO 2025-11-28 23:20:51,607 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:04,607 basehttp 87963 6195884032 "GET /admin/main_app/englishword/57/change/ HTTP/1.1" 200 29232
+INFO 2025-11-28 23:24:04,630 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:06,363 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:24:06,389 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:07,046 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 23:24:07,073 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:07,768 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39842
+INFO 2025-11-28 23:24:07,794 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:08,332 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-28 23:24:08,920 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39840
+INFO 2025-11-28 23:24:08,950 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:09,592 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 23:24:09,628 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:10,277 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:24:10,893 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:24:10,916 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:31,722 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47551
+INFO 2025-11-28 23:24:31,742 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:32,462 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 23:24:32,485 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:24:33,679 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39842
+INFO 2025-11-28 23:24:33,710 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:30:30,494 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47960
+INFO 2025-11-28 23:30:30,515 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:30:34,210 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 200 29224
+INFO 2025-11-28 23:30:34,228 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:33:35,038 apps 62760 8683061824 Main app signals imported
+INFO 2025-11-28 23:33:35,038 apps 62761 8683061824 Main app signals imported
+INFO 2025-11-28 23:33:37,984 apps 62846 8683061824 Main app signals imported
+INFO 2025-11-28 23:33:38,050 apps 62849 8683061824 Main app signals imported
+INFO 2025-11-28 23:34:17,380 apps 64036 8683061824 Main app signals imported
+INFO 2025-11-28 23:34:17,380 apps 64037 8683061824 Main app signals imported
+INFO 2025-11-28 23:34:19,329 apps 64091 8683061824 Main app signals imported
+INFO 2025-11-28 23:34:19,329 apps 64090 8683061824 Main app signals imported
+INFO 2025-11-28 23:35:00,817 basehttp 87963 6195884032 "GET /admin/ HTTP/1.1" 200 25014
+INFO 2025-11-28 23:35:00,826 basehttp 87963 6195884032 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-11-28 23:35:00,830 basehttp 87963 6195884032 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-11-28 23:36:42,436 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 200 30338
+INFO 2025-11-28 23:36:42,461 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:36:44,011 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 23:36:44,043 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:36:45,044 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47960
+INFO 2025-11-28 23:36:45,074 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:36:46,768 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 200 30338
+INFO 2025-11-28 23:36:46,791 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:36:48,887 basehttp 87963 6195884032 "GET /media/word_media/2025/11/28/WechatIMG1274_n0vi3sA.jpg HTTP/1.1" 200 65001
+INFO 2025-11-28 23:37:31,226 apps 69755 8683061824 Main app signals imported
+INFO 2025-11-28 23:37:31,226 apps 69756 8683061824 Main app signals imported
+INFO 2025-11-28 23:37:33,194 apps 69811 8683061824 Main app signals imported
+INFO 2025-11-28 23:37:33,194 apps 69810 8683061824 Main app signals imported
+INFO 2025-11-28 23:38:11,768 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 200 32544
+INFO 2025-11-28 23:38:13,428 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 200 32544
+INFO 2025-11-28 23:38:13,447 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:40:54,449 basehttp 87963 6195884032 "GET /admin/main_app/englishword/68/change/ HTTP/1.1" 302 0
+INFO 2025-11-28 23:40:54,472 basehttp 87963 6195884032 "GET /admin/ HTTP/1.1" 200 25190
+INFO 2025-11-28 23:40:54,489 basehttp 87963 6195884032 "GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 504
+INFO 2025-11-28 23:40:57,802 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:40:57,833 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:42:48,944 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:42:48,974 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:42:50,445 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:42:55,885 basehttp 87963 6195884032 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2025-11-28 23:42:58,605 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39842
+INFO 2025-11-28 23:42:58,635 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:00,033 basehttp 87963 6195884032 "GET /admin/goal_app/goal/ HTTP/1.1" 200 27977
+INFO 2025-11-28 23:43:00,052 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:01,450 basehttp 87963 6195884032 "GET /admin/goal_app/task/ HTTP/1.1" 200 39840
+INFO 2025-11-28 23:43:01,503 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:02,466 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:43:02,490 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:02,953 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:43:05,059 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:43:06,337 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:43:06,367 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:08,595 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47551
+INFO 2025-11-28 23:43:08,624 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:10,504 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:43:10,529 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:11,612 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-28 23:43:11,636 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:13,497 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:43:14,904 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47550
+INFO 2025-11-28 23:43:14,927 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:43:56,814 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47948
+INFO 2025-11-28 23:43:56,841 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:45:22,916 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47945
+INFO 2025-11-28 23:45:22,936 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:47:47,527 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 200 30231
+INFO 2025-11-28 23:47:47,550 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:47:49,477 basehttp 87963 6195884032 "GET /media/word_media/2025/11/28/WechatIMG1275.jpg HTTP/1.1" 200 37160
+INFO 2025-11-28 23:47:52,257 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 200 30231
+INFO 2025-11-28 23:48:12,432 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 200 31332
+INFO 2025-11-28 23:48:12,463 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:50:57,021 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:50:59,106 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47946
+INFO 2025-11-28 23:50:59,138 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:51:00,128 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 200 31332
+INFO 2025-11-28 23:51:00,150 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:51:02,511 basehttp 87963 6195884032 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2025-11-28 23:52:32,651 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47966
+INFO 2025-11-28 23:52:32,679 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:52:33,885 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 200 31341
+INFO 2025-11-28 23:52:33,909 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-28 23:54:11,158 basehttp 87963 6195884032 "GET /admin/main_app/englishword/70/change/ HTTP/1.1" 302 0
+INFO 2025-11-28 23:54:11,183 basehttp 87963 6195884032 "GET /admin/ HTTP/1.1" 200 25190
+INFO 2025-11-28 23:54:12,873 basehttp 87963 6195884032 "GET /admin/main_app/englishword/ HTTP/1.1" 200 47552
+INFO 2025-11-28 23:54:12,902 basehttp 87963 6195884032 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-29 09:16:21,144 apps 98926 8683061824 Main app signals imported
+INFO 2025-11-29 09:16:21,144 apps 98925 8683061824 Main app signals imported
+INFO 2025-11-29 09:16:22,973 apps 98978 8683061824 Main app signals imported
+INFO 2025-11-29 09:16:23,081 apps 98979 8683061824 Main app signals imported
