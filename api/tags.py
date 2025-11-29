@@ -1,5 +1,6 @@
 
-# === tags.py - 支持两种标签类型的完整版本 ===
+
+# === tags.py - 修复更新函数的异步问题 ===
 from typing import TYPE_CHECKING, List, Optional, Literal
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel
@@ -63,6 +64,14 @@ async def get_tag_model(tag_type: str):
             raise HTTPException(status_code=500, detail="Word标签模型未找到")
     else:
         raise HTTPException(status_code=400, detail="不支持的标签类型")
+
+# 修复：创建同步函数来检查标签名称是否存在
+def sync_check_tag_name_exists(tag_model, name, creator, exclude_id=None):
+    """同步函数：检查标签名称是否已存在"""
+    queryset = tag_model.objects.filter(name=name, creator=creator)
+    if exclude_id:
+        queryset = queryset.exclude(id=exclude_id)
+    return queryset.exists()
 
 # 异步查询函数
 async def async_get_tags(queryset, skip: int, limit: int):
@@ -185,10 +194,10 @@ async def create_tag(
         tag_model = await get_tag_model(tag_data.tag_type)
         
         # 检查标签名称是否已存在（对同一用户和同一类型）
-        existing_tag = await sync_to_async(tag_model.objects.filter)(
-            name=tag_data.name, creator=current_user
+        name_exists = await sync_to_async(sync_check_tag_name_exists)(
+            tag_model, tag_data.name, current_user
         )
-        if await sync_to_async(existing_tag.exists)():
+        if name_exists:
             raise HTTPException(status_code=400, detail="标签名称已存在")
         
         # 创建标签
@@ -223,10 +232,10 @@ async def update_tag(
         if tag_data.name is not None:
             # 检查新名称是否与其他标签冲突
             if tag_data.name != tag.name:
-                existing_tag = await sync_to_async(tag_model.objects.filter)(
-                    name=tag_data.name, creator=current_user
-                ).exclude(id=tag_id)
-                if await sync_to_async(existing_tag.exists)():
+                name_exists = await sync_to_async(sync_check_tag_name_exists)(
+                    tag_model, tag_data.name, current_user, tag_id
+                )
+                if name_exists:
                     raise HTTPException(status_code=400, detail="标签名称已存在")
             update_fields['name'] = tag_data.name
         
