@@ -234,7 +234,7 @@ docker run -p 8000:8000 goals-app
 
 ## 👨‍💻 作者
 
-**Meng** - *初始开发*
+**Meng**
 
 ## 🙏 致谢
 
