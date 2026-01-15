@@ -6,6 +6,6 @@ from django.db import models
 
 class User(AbstractUser):
     email = models.EmailField(unique=True)
-    position = models.CharField(max_length=255)  
+    position = models.CharField(max_length=255, blank=True, default='')  
     age = models.PositiveIntegerField(null=True, blank=True)  
     

@@ -6,7 +6,7 @@ from rest_framework.validators import UniqueValidator
 User = get_user_model()
 
 class UserCreateSerializer(BaseUserCreateSerializer):
-    position = serializers.CharField(max_length=255, required=False, default="")
+    position = serializers.CharField(max_length=255, required=False, allow_blank=True, default="")
     age = serializers.IntegerField(required=False, allow_null=True)
     email = serializers.EmailField(
         required=True,
@@ -38,7 +38,7 @@ class UserCreateSerializer(BaseUserCreateSerializer):
         return user
 
 class UserSerializer(BaseUserCreateSerializer):
-    position = serializers.CharField(max_length=255, required=False)
+    position = serializers.CharField(max_length=255, required=False, allow_blank=True)
     age = serializers.IntegerField(required=False, allow_null=True)
 
     class Meta(BaseUserCreateSerializer.Meta):

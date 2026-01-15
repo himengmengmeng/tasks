@@ -831,5 +831,34 @@ async def logout_all_devices(
             detail="全部登出操作失败"
         )
 
-# 其余的路由保持不变...
-# [保留原来的所有其他路由，包括test-token, me, check-username等]
+@router.get(
+    "/me",
+    response_model=UserResponse,
+    summary="获取当前用户信息",
+    description="""
+获取当前登录用户的详细信息。
+
+### 使用说明
+需要在 Header 中提供有效的 access_token
+
+### 返回信息
+- 用户ID、用户名、邮箱等基本信息
+    """,
+    responses={
+        200: {"description": "成功返回用户信息"},
+        401: {"description": "未授权访问"}
+    }
+)
+async def get_current_user_info(
+    current_user: User = Depends(get_current_active_user)
+) -> UserResponse:
+    """获取当前用户信息"""
+    return UserResponse(
+        id=current_user.id,
+        username=current_user.username,
+        email=current_user.email,
+        first_name=current_user.first_name,
+        last_name=current_user.last_name,
+        position=getattr(current_user, 'position', ''),
+        age=getattr(current_user, 'age', None)
+    )

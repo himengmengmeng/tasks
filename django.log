@@ -7061,3 +7061,73 @@ INFO 2026-01-11 22:42:38,723 basehttp 8255 6137491456 "GET /admin/core/user/ HTT
 INFO 2026-01-11 22:42:38,744 basehttp 8255 6137491456 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 WARNING 2026-01-11 22:42:38,797 log 8255 6137491456 Not Found: /favicon.ico
 WARNING 2026-01-11 22:42:38,797 basehttp 8255 6137491456 "GET /favicon.ico HTTP/1.1" 404 16048
+INFO 2026-01-15 23:19:24,799 apps 26540 8449917504 Main app signals imported
+INFO 2026-01-15 23:19:25,214 apps 26548 8449917504 Main app signals imported
+INFO 2026-01-15 23:19:25,218 autoreload 26548 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-15 23:19:30,879 apps 26676 8449917504 Main app signals imported
+INFO 2026-01-15 23:19:55,100 apps 27455 8449917504 Main app signals imported
+INFO 2026-01-15 23:19:55,449 apps 27456 8449917504 Main app signals imported
+INFO 2026-01-15 23:19:58,920 apps 27510 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:06,280 autoreload 26548 8449917504 /Users/meng/Desktop/Goals/core/models.py changed, reloading.
+INFO 2026-01-15 23:20:06,548 apps 27755 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:06,551 autoreload 27755 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-15 23:20:06,754 apps 27779 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:10,726 apps 27838 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:17,955 autoreload 27755 8449917504 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2026-01-15 23:20:18,013 apps 28083 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:18,185 apps 28084 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:18,187 autoreload 28084 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-15 23:20:22,278 apps 28163 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:24,483 autoreload 28084 8449917504 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2026-01-15 23:20:24,733 apps 28312 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:24,735 autoreload 28312 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-15 23:20:24,968 apps 28315 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:25,331 apps 28316 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:27,915 apps 28368 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:41,781 apps 28720 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:42,060 apps 28753 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:42,437 apps 28767 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:42,800 apps 28768 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:49,451 autoreload 28312 8449917504 /Users/meng/Desktop/Goals/core/models.py changed, reloading.
+INFO 2026-01-15 23:20:49,615 apps 29000 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:49,674 apps 29001 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:49,676 autoreload 29001 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-15 23:20:51,569 apps 29042 8449917504 Main app signals imported
+INFO 2026-01-15 23:20:52,794 apps 29048 8449917504 Main app signals imported
+INFO 2026-01-15 23:21:05,281 auth 29048 8449917504 Token added to blacklist: 75883dbf..., type: access
+INFO 2026-01-15 23:21:05,281 auth 29048 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-15 23:21:05,281 auth 29048 8449917504 Token added to blacklist: 027c5e11..., type: refresh
+INFO 2026-01-15 23:21:05,282 auth 29048 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-15 23:22:31,414 auth 29048 8449917504 Token added to blacklist: a455a08f..., type: access
+INFO 2026-01-15 23:22:31,414 auth 29048 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-15 23:22:31,414 auth 29048 8449917504 Token added to blacklist: c18b8ed0..., type: refresh
+INFO 2026-01-15 23:22:31,414 auth 29048 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-15 23:22:55,208 basehttp 29001 6128267264 "GET /admin/core/user/ HTTP/1.1" 200 29202
+INFO 2026-01-15 23:22:55,229 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-15 23:23:12,342 basehttp 29001 6128267264 "POST /admin/core/user/ HTTP/1.1" 200 22585
+INFO 2026-01-15 23:23:12,362 basehttp 29001 6128267264 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:13,663 basehttp 29001 6128267264 "POST /admin/core/user/ HTTP/1.1" 302 0
+INFO 2026-01-15 23:23:13,683 basehttp 29001 6128267264 "GET /admin/core/user/ HTTP/1.1" 200 28863
+INFO 2026-01-15 23:23:13,713 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-15 23:23:40,216 auth 29048 6113636352 User created successfully: zxczxcadfadad
+INFO 2026-01-15 23:23:53,577 basehttp 29001 6128267264 "GET /admin/core/user/ HTTP/1.1" 200 29207
+INFO 2026-01-15 23:23:53,611 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-15 23:23:56,911 basehttp 29001 6128267264 "GET /admin/core/user/12/change/ HTTP/1.1" 200 39851
+INFO 2026-01-15 23:23:56,929 basehttp 29001 6325039104 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,929 basehttp 29001 6145093632 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2026-01-15 23:23:56,930 basehttp 29001 6341865472 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,931 basehttp 29001 6358691840 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,931 basehttp 29001 6161920000 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2026-01-15 23:23:56,932 basehttp 29001 6145093632 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,932 basehttp 29001 6341865472 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,933 basehttp 29001 6145093632 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,938 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-15 23:23:56,969 basehttp 29001 6145093632 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,970 basehttp 29001 6128267264 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,970 basehttp 29001 6341865472 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,971 basehttp 29001 6358691840 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2026-01-15 23:23:56,971 basehttp 29001 6161920000 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2026-01-15 23:24:19,272 auth 29048 8449917504 Token added to blacklist: 7636b27a..., type: access
+INFO 2026-01-15 23:24:19,273 auth 29048 8449917504 Access token blacklisted for user: 12
+INFO 2026-01-15 23:24:19,273 auth 29048 8449917504 Token added to blacklist: 1f9d7003..., type: refresh
+INFO 2026-01-15 23:24:19,273 auth 29048 8449917504 Refresh token blacklisted for user: 12
