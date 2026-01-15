@@ -111,8 +111,8 @@ python api/main.py
 ### API文档
 
 启动FastAPI服务器后，访问以下地址查看API文档：
-- **Swagger UI**: http://127.0.0.1:8001/docs
-- **ReDoc**: http://127.0.0.1:8001/redoc
+**Swagger UI**: http://127.0.0.1:8001/docs
+
 
 ## 📚 API 接口
 
