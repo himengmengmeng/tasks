@@ -141,6 +141,8 @@ python api/main.py
 - `GET /api/words/{id}/` - 获取单词详情
 - `PUT /api/words/{id}/` - 更新单词
 - `DELETE /api/words/{id}/` - 删除单词
+- `POST /api/words/{id}/media` - 上传媒体文件（支持图片、视频、文档）
+- `DELETE /api/words/{id}/media/{media_id}` - 删除媒体文件
 
 ### 标签管理 (`/api/tags`)
 - `GET /api/tags/` - 获取标签列表
