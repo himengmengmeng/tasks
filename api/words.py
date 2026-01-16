@@ -33,12 +33,17 @@ class WordUpdate(BaseModel):
     notes: Optional[str] = None
     tags: Optional[List[int]] = None
 
+class MediaFileInfo(BaseModel):
+    id: int
+    file_url: str
+    filename: str
+
 class WordResponse(WordBase):
     id: int
     creator_id: int
     created_at: datetime
     tags: List[str] = []
-    media_files: List[str] = []
+    media_files: List[MediaFileInfo] = []
     
     class Config:
         from_attributes = True
@@ -67,9 +72,17 @@ async def async_word_to_response(word) -> WordResponse:
     tags_queryset = word.tags.all()
     tag_names = await sync_to_async(list)(tags_queryset.values_list('name', flat=True))
     
-    # 异步获取媒体文件
+    # 异步获取媒体文件（包含完整信息）
     media_queryset = word.media_files.all()
-    media_files = await sync_to_async(list)(media_queryset.values_list('file', flat=True))
+    media_list = await sync_to_async(list)(media_queryset)
+    media_files = [
+        MediaFileInfo(
+            id=media.id,
+            file_url=media.file.url if media.file else '',
+            filename=media.file.name.split('/')[-1] if media.file else ''
+        )
+        for media in media_list
+    ]
     
     return WordResponse(
         id=word.id,
@@ -115,9 +128,14 @@ async def list_words(
         # 构建查询
         queryset = EnglishWord.objects.filter(creator=current_user)
         
-        # 应用过滤器
+        # 应用过滤器 - 多字段搜索
         if search:
-            queryset = queryset.filter(title__icontains=search)
+            from django.db.models import Q
+            queryset = queryset.filter(
+                Q(title__icontains=search) |
+                Q(explanation__icontains=search) |
+                Q(notes__icontains=search)
+            )
         if tag_id:
             queryset = queryset.filter(tags__id=tag_id)
         
