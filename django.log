@@ -7228,3 +7228,91 @@ INFO 2026-01-16 16:27:24,618 basehttp 29001 6128267264 "GET /admin/main_app/engl
 INFO 2026-01-16 16:27:24,645 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2026-01-16 18:50:24,581 basehttp 29001 6128267264 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67694
 INFO 2026-01-16 18:50:24,615 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-16 19:27:32,195 auth 79094 8449917504 Token added to blacklist: d364baf8..., type: access
+INFO 2026-01-16 19:27:32,196 auth 79094 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-16 19:27:32,196 auth 79094 8449917504 Token added to blacklist: e7ab929b..., type: refresh
+INFO 2026-01-16 19:27:32,196 auth 79094 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-16 22:34:08,593 auth 79094 8449917504 Token added to blacklist: 1d7eec8d..., type: access
+INFO 2026-01-16 22:34:08,594 auth 79094 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-16 22:34:08,595 auth 79094 8449917504 Token added to blacklist: be24807b..., type: refresh
+INFO 2026-01-16 22:34:08,595 auth 79094 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-16 22:51:32,518 basehttp 29001 6128267264 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67719
+INFO 2026-01-16 22:51:32,553 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-17 09:49:32,897 auth 79094 6142373888 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:49:32,900 auth 79094 6142373888 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:49:32,902 auth 79094 6142373888 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:49:41,231 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:49:46,816 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:50:04,128 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-17 09:50:12,297 basehttp 29001 6128267264 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67719
+INFO 2026-01-17 09:50:12,327 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 09:50:24,369 basehttp 29001 6128267264 "GET /admin/core/user/ HTTP/1.1" 200 27702
+INFO 2026-01-17 09:50:24,393 basehttp 29001 6128267264 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-17 09:50:37,582 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:50:48,329 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:50:49,168 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-17 09:51:05,355 basehttp 29001 6128267264 "POST /admin/logout/ HTTP/1.1" 200 17092
+INFO 2026-01-17 09:51:07,415 basehttp 29001 6128267264 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-01-17 09:51:07,434 basehttp 29001 6128267264 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17699
+INFO 2026-01-17 09:51:15,577 basehttp 29001 6128267264 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-01-17 09:51:15,600 basehttp 29001 6128267264 "GET /admin/ HTTP/1.1" 200 24473
+INFO 2026-01-17 09:51:15,622 basehttp 29001 6128267264 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+ERROR 2026-01-17 09:51:27,327 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:38,489 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:39,311 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:39,910 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:40,142 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:40,335 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:40,516 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:51:40,702 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:34,389 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:38,087 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:38,873 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:39,408 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:39,645 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:39,954 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:40,701 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:40,914 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:52:41,073 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:53:16,365 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:53:27,733 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:53:29,257 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:53:30,224 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:53:52,784 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:54:17,303 auth 79094 6142373888 Authentication error for user Meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:56:35,647 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:56:56,254 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:56:57,160 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:56:57,909 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:56:59,028 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 09:57:03,549 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:11,406 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:16,139 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:17,194 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:22,961 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:23,743 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-17 10:09:24,234 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-17 10:13:33,074 apps 95562 8449917504 Main app signals imported
+INFO 2026-01-17 10:13:33,238 apps 95563 8449917504 Main app signals imported
+INFO 2026-01-17 10:13:33,239 autoreload 95563 8449917504 Watching for file changes with StatReloader
+ERROR 2026-01-17 10:13:53,922 auth 79094 6142373888 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-17 10:14:55,270 apps 98932 8449917504 Main app signals imported
+INFO 2026-01-17 11:13:13,479 basehttp 95563 6191525888 "GET /admin/core/user/ HTTP/1.1" 200 27702
+INFO 2026-01-17 11:13:13,511 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2026-01-17 11:13:13,539 log 95563 6191525888 Not Found: /favicon.ico
+WARNING 2026-01-17 11:13:13,539 basehttp 95563 6191525888 "GET /favicon.ico HTTP/1.1" 404 16047
+INFO 2026-01-17 11:13:15,107 basehttp 95563 6191525888 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25039
+INFO 2026-01-17 11:13:15,806 basehttp 95563 6191525888 "GET /admin/goal_app/task/ HTTP/1.1" 200 44351
+INFO 2026-01-17 11:13:15,827 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 11:13:19,243 basehttp 95563 6191525888 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-17 11:13:19,265 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 11:17:10,697 basehttp 95563 6191525888 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-17 11:17:10,721 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 11:17:11,916 basehttp 95563 6191525888 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-17 11:17:11,939 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 13:02:55,226 apps 84633 8449917504 Main app signals imported
+INFO 2026-01-17 13:03:07,425 apps 85107 8449917504 Main app signals imported
+INFO 2026-01-17 13:03:13,221 apps 85392 8449917504 Main app signals imported
+INFO 2026-01-17 13:03:30,050 apps 86029 8449917504 Main app signals imported
+INFO 2026-01-17 13:06:03,421 apps 91963 8449917504 Main app signals imported
+INFO 2026-01-17 13:06:09,152 apps 92218 8449917504 Main app signals imported

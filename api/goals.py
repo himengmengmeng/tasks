@@ -89,6 +89,7 @@ async def list_goals(
     limit: int = Query(100, ge=1, le=1000, description="每页数量"),
     status: Optional[str] = Query(None, description="按状态过滤"),
     priority: Optional[str] = Query(None, description="按优先级过滤"),
+    tag_id: Optional[int] = Query(None, description="按标签ID过滤"),
     current_user: User = Depends(get_current_active_user)
 ) -> GoalListResponse:
     """获取目标列表"""
@@ -101,6 +102,8 @@ async def list_goals(
         queryset = queryset.filter(status=status)
     if priority:
         queryset = queryset.filter(priority=priority)
+    if tag_id:
+        queryset = queryset.filter(tags__id=tag_id)
     
     # 使用异步方式获取数据
     goals, total = await async_get_goals(queryset, skip, limit)

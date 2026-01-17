@@ -98,6 +98,7 @@ async def list_tasks(
     status: Optional[str] = Query(None, description="按状态过滤"),
     priority: Optional[str] = Query(None, description="按优先级过滤"),
     goal_id: Optional[int] = Query(None, description="按目标ID过滤"),
+    tag_id: Optional[int] = Query(None, description="按标签ID过滤"),
     current_user: User = Depends(get_current_active_user)
 ) -> TaskListResponse:
     """获取任务列表"""
@@ -114,6 +115,8 @@ async def list_tasks(
             queryset = queryset.filter(priority=priority)
         if goal_id:
             queryset = queryset.filter(goal_id=goal_id)
+        if tag_id:
+            queryset = queryset.filter(tags__id=tag_id)
         
         # 预取相关对象
         queryset = queryset.select_related('goal').prefetch_related('tags')
