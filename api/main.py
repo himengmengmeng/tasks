@@ -29,7 +29,7 @@ app = FastAPI(
     description="Meng's Goals & Tasks Management API",
     version="2.0.0",
     docs_url="/docs",
-    redoc_url="/redoc",
+    
     # 新增配置：隐藏 Schemas 部分
     swagger_ui_parameters={
         "deepLinking": True,

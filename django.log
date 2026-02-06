@@ -7316,3 +7316,286 @@ INFO 2026-01-17 13:03:13,221 apps 85392 8449917504 Main app signals imported
 INFO 2026-01-17 13:03:30,050 apps 86029 8449917504 Main app signals imported
 INFO 2026-01-17 13:06:03,421 apps 91963 8449917504 Main app signals imported
 INFO 2026-01-17 13:06:09,152 apps 92218 8449917504 Main app signals imported
+INFO 2026-01-17 20:21:31,274 basehttp 95563 6191525888 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30175
+INFO 2026-01-17 20:21:31,305 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-17 20:21:32,570 basehttp 95563 6191525888 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67503
+INFO 2026-01-17 20:21:32,597 basehttp 95563 6191525888 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-18 12:07:25,378 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,380 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,382 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,383 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,386 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,387 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:25,391 auth 92218 6120468480 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-18 12:07:34,984 auth 92218 6120468480 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-18 12:08:32,542 apps 80095 8449917504 Main app signals imported
+INFO 2026-01-18 12:08:32,691 apps 80096 8449917504 Main app signals imported
+INFO 2026-01-18 12:08:32,693 autoreload 80096 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-18 12:09:43,136 apps 82536 8449917504 Main app signals imported
+INFO 2026-01-18 12:10:15,349 auth 82536 8449917504 Token added to blacklist: 3bbb72b3..., type: access
+INFO 2026-01-18 12:10:15,350 auth 82536 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-18 12:10:15,351 auth 82536 8449917504 Token added to blacklist: e3079160..., type: refresh
+INFO 2026-01-18 12:10:15,351 auth 82536 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-18 12:25:30,957 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67577
+INFO 2026-01-18 12:25:30,995 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-18 12:25:41,488 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67577
+INFO 2026-01-18 12:25:41,509 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-18 15:51:11,627 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67633
+INFO 2026-01-18 15:51:11,662 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-18 21:47:54,031 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67623
+INFO 2026-01-18 21:47:54,061 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-18 22:27:03,707 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67633
+INFO 2026-01-18 22:27:03,738 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-19 00:07:03,977 basehttp 80096 6191640576 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67633
+INFO 2026-01-19 00:07:04,016 basehttp 80096 6191640576 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-19 10:05:00,539 auth 82536 6203305984 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-19 10:05:00,541 auth 82536 6203305984 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-19 10:05:00,543 auth 82536 6203305984 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-19 10:05:08,566 auth 82536 6203305984 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-19 10:05:42,730 apps 89136 8449917504 Main app signals imported
+INFO 2026-01-19 10:05:42,880 apps 89137 8449917504 Main app signals imported
+INFO 2026-01-19 10:05:42,882 autoreload 89137 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-19 10:06:13,029 apps 90677 8449917504 Main app signals imported
+INFO 2026-01-19 13:25:45,081 basehttp 89137 6171340800 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67633
+INFO 2026-01-19 13:25:45,113 basehttp 89137 6171340800 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-19 16:54:49,908 autoreload 89137 8449917504 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2026-01-19 16:54:50,331 apps 73905 8449917504 Main app signals imported
+INFO 2026-01-19 16:54:50,331 apps 73904 8449917504 Main app signals imported
+INFO 2026-01-19 16:54:50,334 autoreload 73904 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-19 16:54:56,639 autoreload 73904 8449917504 /Users/meng/Desktop/Goals/core/serializers.py changed, reloading.
+INFO 2026-01-19 16:54:56,750 apps 74202 8449917504 Main app signals imported
+INFO 2026-01-19 16:54:56,871 apps 74203 8449917504 Main app signals imported
+INFO 2026-01-19 16:54:56,874 autoreload 74203 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-19 16:55:01,863 apps 74345 8449917504 Main app signals imported
+INFO 2026-01-19 16:55:04,879 basehttp 74203 6202699776 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67757
+INFO 2026-01-19 16:55:04,907 basehttp 74203 6202699776 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-19 16:55:11,777 apps 74713 8449917504 Main app signals imported
+INFO 2026-01-19 18:16:56,376 basehttp 74203 6202699776 "GET /admin/ HTTP/1.1" 200 24473
+INFO 2026-01-19 18:16:56,385 basehttp 74203 6202699776 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-19 18:16:56,388 basehttp 74203 6202699776 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+WARNING 2026-01-19 18:18:55,886 log 74203 6202699776 Method Not Allowed: /auth/jwt/create/
+WARNING 2026-01-19 18:18:55,886 basehttp 74203 6202699776 "GET /auth/jwt/create/ HTTP/1.1" 405 21290
+INFO 2026-01-19 18:18:55,929 basehttp 74203 6236352512 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-01-19 18:18:55,930 basehttp 74203 6219526144 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-01-19 18:18:55,930 basehttp 74203 6253178880 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-01-19 18:18:55,931 basehttp 74203 6286831616 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-01-19 18:18:55,931 basehttp 74203 6236352512 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-01-19 18:18:55,933 basehttp 74203 6236352512 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-01-19 18:18:55,933 basehttp 74203 6219526144 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-01-19 18:18:55,934 basehttp 74203 6253178880 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-01-19 18:18:55,934 basehttp 74203 6286831616 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-01-19 18:18:55,934 basehttp 74203 6202699776 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-01-19 18:18:55,935 basehttp 74203 6270005248 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-01-19 18:18:55,940 basehttp 74203 6202699776 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-01-19 18:19:32,299 basehttp 74203 6202699776 "GET /admin/ HTTP/1.1" 200 24473
+INFO 2026-01-20 11:17:40,929 basehttp 74203 6202699776 "GET /admin/main_app/englishword/ HTTP/1.1" 302 0
+INFO 2026-01-20 11:17:40,947 basehttp 74203 6202699776 "GET /admin/login/?next=/admin/main_app/englishword/ HTTP/1.1" 200 17762
+INFO 2026-01-20 11:17:51,845 basehttp 74203 6202699776 "POST /admin/login/?next=/admin/main_app/englishword/ HTTP/1.1" 200 17920
+INFO 2026-01-20 11:18:44,539 apps 53087 8449917504 Main app signals imported
+INFO 2026-01-20 11:18:44,695 apps 53102 8449917504 Main app signals imported
+INFO 2026-01-20 11:18:44,696 autoreload 53102 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-20 11:19:23,593 apps 54724 8449917504 Main app signals imported
+INFO 2026-01-20 11:19:30,637 basehttp 53102 6137671680 "POST /admin/login/?next=/admin/main_app/englishword/ HTTP/1.1" 200 17922
+INFO 2026-01-20 11:19:38,607 basehttp 53102 6137671680 "POST /admin/login/?next=/admin/main_app/englishword/ HTTP/1.1" 302 0
+INFO 2026-01-20 11:19:38,787 basehttp 53102 6137671680 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67802
+INFO 2026-01-20 11:19:38,821 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-20 11:19:46,405 auth 54724 8449917504 Token added to blacklist: 5ccfbfe3..., type: access
+INFO 2026-01-20 11:19:46,405 auth 54724 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-20 11:19:46,405 auth 54724 8449917504 Token added to blacklist: cc47cc17..., type: refresh
+INFO 2026-01-20 11:19:46,405 auth 54724 8449917504 Refresh token blacklisted for user: 2
+WARNING 2026-01-20 11:20:49,842 log 53102 6137671680 Not Found: /silk/
+WARNING 2026-01-20 11:20:49,842 basehttp 53102 6137671680 "GET /silk/ HTTP/1.1" 404 16025
+INFO 2026-01-21 13:55:15,474 basehttp 53102 6137671680 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67802
+INFO 2026-01-21 13:55:15,501 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:17,153 basehttp 53102 6137671680 "GET /admin/main_app/englishword/460/change/ HTTP/1.1" 200 29320
+INFO 2026-01-21 13:55:17,181 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:19,395 basehttp 53102 6137671680 "GET /admin/goal_app/task/ HTTP/1.1" 200 45424
+INFO 2026-01-21 13:55:19,424 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:20,734 basehttp 53102 6137671680 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67802
+INFO 2026-01-21 13:55:20,760 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:23,220 basehttp 53102 6137671680 "GET /admin/main_app/englishword/460/change/ HTTP/1.1" 200 29320
+INFO 2026-01-21 13:55:23,248 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:24,640 basehttp 53102 6137671680 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67802
+INFO 2026-01-21 13:55:24,667 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:26,602 basehttp 53102 6137671680 "GET /admin/main_app/tag/ HTTP/1.1" 200 25102
+INFO 2026-01-21 13:55:28,063 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-21 13:55:28,086 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:29,094 basehttp 53102 6137671680 "GET /admin/goal_app/task/ HTTP/1.1" 200 45424
+INFO 2026-01-21 13:55:29,121 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 13:55:30,451 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-21 13:55:30,472 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-21 14:01:47,997 auth 54724 8449917504 Token added to blacklist: cc6ad843..., type: access
+INFO 2026-01-21 14:01:47,998 auth 54724 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-21 14:01:47,998 auth 54724 8449917504 Token added to blacklist: 2470548d..., type: refresh
+INFO 2026-01-21 14:01:47,998 auth 54724 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-21 14:02:36,807 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-21 14:02:36,835 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-22 08:58:54,156 auth 54724 6172700672 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-22 08:58:54,160 auth 54724 6172700672 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-22 08:58:54,163 auth 54724 6172700672 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-22 09:43:06,718 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30176
+INFO 2026-01-22 09:43:06,752 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-22 09:43:10,367 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-01-22 09:43:10,389 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-22 09:43:26,101 auth 54724 6172700672 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-22 12:13:36,995 basehttp 53102 6137671680 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30176
+INFO 2026-01-22 12:13:37,033 basehttp 53102 6137671680 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-22 12:26:04,609 auth 54724 6172700672 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-22 12:26:16,593 auth 54724 6172700672 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-22 12:28:34,274 apps 87712 8449917504 Main app signals imported
+INFO 2026-01-22 12:28:34,456 apps 87714 8449917504 Main app signals imported
+INFO 2026-01-22 12:28:34,457 autoreload 87714 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-22 12:36:43,613 apps 6905 8449917504 Main app signals imported
+INFO 2026-01-22 12:51:45,328 basehttp 87714 6159298560 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30176
+INFO 2026-01-22 12:51:45,354 basehttp 87714 6159298560 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-23 12:12:41,697 auth 6905 8449917504 Token added to blacklist: 1f03aeba..., type: access
+INFO 2026-01-23 12:12:41,700 auth 6905 8449917504 Access token blacklisted for user: 2
+INFO 2026-01-23 12:12:41,700 auth 6905 8449917504 Token added to blacklist: dab1b096..., type: refresh
+INFO 2026-01-23 12:12:41,700 auth 6905 8449917504 Refresh token blacklisted for user: 2
+INFO 2026-01-24 11:45:52,972 apps 28043 8449917504 Main app signals imported
+INFO 2026-01-24 11:46:08,947 apps 28729 8449917504 Main app signals imported
+INFO 2026-01-24 12:00:08,494 basehttp 87714 6159298560 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67810
+INFO 2026-01-24 12:00:08,532 basehttp 87714 6159298560 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-24 12:00:21,529 basehttp 87714 6159298560 "GET /admin/main_app/englishword/461/change/ HTTP/1.1" 200 29153
+INFO 2026-01-24 12:00:22,222 basehttp 87714 6159298560 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-24 14:06:35,206 basehttp 87714 6159298560 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67788
+INFO 2026-01-24 14:06:35,244 basehttp 87714 6159298560 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-24 18:54:19,950 basehttp 87714 6159298560 "GET /admin/main_app/englishword/462/change/ HTTP/1.1" 200 29179
+INFO 2026-01-24 18:54:19,985 basehttp 87714 6159298560 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-24 18:54:21,739 basehttp 87714 6159298560 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67766
+INFO 2026-01-24 20:18:50,592 apps 24260 8449917504 Main app signals imported
+INFO 2026-01-24 20:19:06,882 apps 24925 8449917504 Main app signals imported
+INFO 2026-01-24 21:14:40,505 apps 54679 8449917504 Main app signals imported
+INFO 2026-01-24 21:14:40,678 autoreload 87714 8449917504 /Users/meng/Desktop/Goals/goal_app/admin.py changed, reloading.
+INFO 2026-01-24 21:14:41,005 apps 54795 8449917504 Main app signals imported
+INFO 2026-01-24 21:14:41,009 autoreload 54795 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-24 21:14:47,423 apps 54997 8449917504 Main app signals imported
+ERROR 2026-01-25 13:01:50,549 auth 54997 6141194240 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-25 13:01:50,551 auth 54997 6141194240 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-25 13:01:50,552 auth 54997 6141194240 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-25 13:01:50,553 auth 54997 6141194240 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-25 13:01:50,554 auth 54997 6141194240 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-25 13:01:58,614 basehttp 54795 6205108224 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67766
+INFO 2026-01-25 13:01:58,657 basehttp 54795 6205108224 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-25 13:01:59,826 basehttp 54795 6205108224 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67766
+INFO 2026-01-25 13:01:59,856 basehttp 54795 6205108224 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-25 14:37:31,901 apps 66829 8449917504 Main app signals imported
+INFO 2026-01-25 14:37:32,057 apps 66839 8449917504 Main app signals imported
+INFO 2026-01-25 14:37:32,059 autoreload 66839 8449917504 Watching for file changes with StatReloader
+ERROR 2026-01-25 14:37:45,597 auth 54997 6141194240 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-25 14:37:52,008 auth 54997 6141194240 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-25 14:38:35,591 apps 69521 8449917504 Main app signals imported
+ERROR 2026-01-26 12:12:49,587 auth 69521 6205140992 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-26 12:12:49,591 auth 69521 6205140992 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-26 12:12:49,593 auth 69521 6205140992 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-26 23:23:13,286 apps 91902 8449917504 Main app signals imported
+INFO 2026-01-26 23:23:13,442 apps 91910 8449917504 Main app signals imported
+INFO 2026-01-26 23:23:13,444 autoreload 91910 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-26 23:23:49,689 apps 93842 8449917504 Main app signals imported
+ERROR 2026-01-27 09:22:57,147 auth 93842 6194720768 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-27 09:22:57,151 auth 93842 6194720768 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-27 09:22:57,153 auth 93842 6194720768 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-27 15:44:04,427 basehttp 91910 6199128064 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67773
+INFO 2026-01-27 15:44:04,453 basehttp 91910 6215954432 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,454 basehttp 91910 6249607168 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,454 basehttp 91910 6232780800 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,455 basehttp 91910 6215954432 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,455 basehttp 91910 6266433536 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,455 basehttp 91910 6283259904 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,456 basehttp 91910 6232780800 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,456 basehttp 91910 6249607168 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,456 basehttp 91910 6266433536 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,457 basehttp 91910 6215954432 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,457 basehttp 91910 6283259904 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,458 basehttp 91910 6249607168 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,458 basehttp 91910 6232780800 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,458 basehttp 91910 6215954432 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,462 basehttp 91910 6215954432 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,462 basehttp 91910 6232780800 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,463 basehttp 91910 6232780800 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,467 basehttp 91910 6232780800 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,468 basehttp 91910 6232780800 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,470 basehttp 91910 6199128064 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-27 15:44:04,477 basehttp 91910 6199128064 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,478 basehttp 91910 6215954432 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,479 basehttp 91910 6232780800 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,479 basehttp 91910 6199128064 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-01-27 15:44:04,487 basehttp 91910 6199128064 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2026-01-27 15:51:12,125 basehttp 91910 6199128064 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67773
+INFO 2026-01-27 15:51:12,157 basehttp 91910 6199128064 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2026-01-27 15:59:29,238 auth 93842 6194720768 Authentication error for user meng: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-27 16:11:01,909 basehttp 91910 6199128064 "GET /admin/core/user/ HTTP/1.1" 200 27702
+INFO 2026-01-27 16:11:01,930 basehttp 91910 6215954432 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-01-27 16:11:01,930 basehttp 91910 6232780800 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-01-27 16:11:01,939 basehttp 91910 6199128064 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-01-27 16:11:03,569 basehttp 91910 6199128064 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30175
+INFO 2026-01-27 16:11:03,594 basehttp 91910 6199128064 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2026-01-27 17:36:46,294 log 91910 6199128064 Not Found: /device-check-tool/
+WARNING 2026-01-27 17:36:46,295 basehttp 91910 6199128064 "GET /device-check-tool/ HTTP/1.1" 404 16077
+INFO 2026-01-27 20:02:58,979 apps 49946 8449917504 Main app signals imported
+INFO 2026-01-27 20:02:59,132 apps 49957 8449917504 Main app signals imported
+INFO 2026-01-27 20:02:59,134 autoreload 49957 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-27 20:03:31,087 apps 51429 8449917504 Main app signals imported
+INFO 2026-01-28 11:27:06,286 apps 76329 8449917504 Main app signals imported
+INFO 2026-01-28 11:27:38,224 apps 78173 8449917504 Main app signals imported
+INFO 2026-01-28 11:27:38,390 apps 78176 8449917504 Main app signals imported
+INFO 2026-01-28 11:27:38,391 autoreload 78176 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-28 11:27:54,125 basehttp 78176 6121762816 "GET /admin/goal_app/goal/ HTTP/1.1" 302 0
+INFO 2026-01-28 11:27:54,141 basehttp 78176 6121762816 "GET /admin/login/?next=/admin/goal_app/goal/ HTTP/1.1" 200 17740
+INFO 2026-01-28 11:27:54,156 basehttp 78176 6121762816 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+WARNING 2026-01-28 13:26:28,043 log 78176 6121762816 Not Found: /device-check-tool/
+WARNING 2026-01-28 13:26:28,043 basehttp 78176 6121762816 "GET /device-check-tool/ HTTP/1.1" 404 16077
+ERROR 2026-01-29 11:47:47,708 auth 76329 6119927808 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-29 11:47:47,719 auth 76329 6119927808 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-01-29 11:47:47,728 auth 76329 6119927808 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-01-29 12:43:15,579 apps 22287 8449917504 Main app signals imported
+INFO 2026-01-29 12:43:15,733 apps 22288 8449917504 Main app signals imported
+INFO 2026-01-29 12:43:15,734 autoreload 22288 8449917504 Watching for file changes with StatReloader
+INFO 2026-01-29 12:44:02,979 apps 24773 8449917504 Main app signals imported
+ERROR 2026-02-01 11:34:46,620 auth 24773 6200127488 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-02-01 11:34:46,630 auth 24773 6200127488 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+ERROR 2026-02-01 11:34:46,641 auth 24773 6200127488 Error getting user by id 2: (2013, 'Lost connection to MySQL server during query')
+INFO 2026-02-02 10:09:51,225 basehttp 22288 6203912192 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-02-02 10:09:51,244 basehttp 22288 6203912192 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17699
+INFO 2026-02-02 10:10:01,323 basehttp 22288 6203912192 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-02-02 10:10:01,354 basehttp 22288 6203912192 "GET /admin/ HTTP/1.1" 200 24473
+INFO 2026-02-02 10:10:01,379 basehttp 22288 6203912192 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-02-02 10:10:01,379 basehttp 22288 6220738560 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-02-02 10:10:01,379 basehttp 22288 6237564928 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-02-02 10:10:05,395 basehttp 22288 6237564928 "GET /admin/goal_app/task/ HTTP/1.1" 200 43348
+INFO 2026-02-02 10:10:05,411 basehttp 22288 6220738560 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2026-02-02 10:10:05,423 basehttp 22288 6237564928 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-02 10:10:06,400 basehttp 22288 6237564928 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25040
+INFO 2026-02-02 10:10:07,512 basehttp 22288 6237564928 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30175
+INFO 2026-02-02 10:10:07,539 basehttp 22288 6237564928 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-02 10:10:08,549 basehttp 22288 6237564928 "GET /admin/main_app/tag/ HTTP/1.1" 200 25103
+INFO 2026-02-02 10:10:09,327 basehttp 22288 6237564928 "GET /admin/main_app/englishword/ HTTP/1.1" 200 67838
+INFO 2026-02-02 10:10:09,356 basehttp 22288 6237564928 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-04 15:16:00,339 basehttp 22288 6203912192 "GET /admin/main_app/englishword/?q=dispel HTTP/1.1" 200 27463
+INFO 2026-02-04 15:16:00,376 basehttp 22288 6203912192 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-04 17:06:27,517 basehttp 22288 6203912192 "GET /admin/main_app/englishword/?q= HTTP/1.1" 200 70481
+INFO 2026-02-04 17:06:27,554 basehttp 22288 6203912192 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-04 17:30:42,555 apps 18903 8449917504 Main app signals imported
+INFO 2026-02-04 17:30:42,707 apps 18904 8449917504 Main app signals imported
+INFO 2026-02-04 17:30:42,709 autoreload 18904 8449917504 Watching for file changes with StatReloader
+INFO 2026-02-04 17:31:13,482 apps 20387 8449917504 Main app signals imported
+INFO 2026-02-05 17:12:06,152 basehttp 18904 6131789824 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30177
+INFO 2026-02-05 17:12:06,192 basehttp 18904 6131789824 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-05 17:12:06,851 basehttp 18904 6131789824 "GET /admin/goal_app/task/ HTTP/1.1" 200 43348
+INFO 2026-02-05 17:12:06,883 basehttp 18904 6131789824 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-05 17:12:07,703 basehttp 18904 6131789824 "GET /admin/goal_app/tag/ HTTP/1.1" 200 25040
+INFO 2026-02-05 17:12:08,299 basehttp 18904 6131789824 "GET /admin/goal_app/task/ HTTP/1.1" 200 43348
+INFO 2026-02-05 17:12:08,331 basehttp 18904 6131789824 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-05 17:12:09,360 basehttp 18904 6131789824 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30174
+INFO 2026-02-05 17:12:09,395 basehttp 18904 6131789824 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-06 12:46:37,039 apps 81385 8449917504 Main app signals imported
+INFO 2026-02-06 12:46:37,192 apps 81395 8449917504 Main app signals imported
+INFO 2026-02-06 12:46:37,194 autoreload 81395 8449917504 Watching for file changes with StatReloader
+INFO 2026-02-06 12:50:44,664 apps 93583 8449917504 Main app signals imported
+INFO 2026-02-06 12:50:44,815 apps 93584 8449917504 Main app signals imported
+INFO 2026-02-06 12:50:44,817 autoreload 93584 8449917504 Watching for file changes with StatReloader
+INFO 2026-02-06 12:55:06,138 apps 1414 8449917504 Main app signals imported
+INFO 2026-02-06 12:55:55,945 apps 2831 8449917504 Main app signals imported
+INFO 2026-02-06 12:57:16,851 basehttp 93584 6163820544 "GET /admin/goal_app/goal/ HTTP/1.1" 200 30176
+INFO 2026-02-06 12:57:16,891 basehttp 93584 6163820544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2026-02-06 13:42:34,577 apps 80227 8449917504 Main app signals imported
