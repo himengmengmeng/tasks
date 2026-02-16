@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'main_app.apps.MainAppConfig',
     'goal_app.apps.GoalAppConfig',
     'core.apps.CoreConfig',
+    'ai_chat.apps.AiChatConfig',
     'django_extensions',
     'guardian', 
 ]

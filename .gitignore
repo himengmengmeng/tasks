@@ -1,2 +1,45 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Environment Variables (IMPORTANT: contains API keys)
+.env
+.env.local
+.env.*.local
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+*.log
+django.log
+
+# Media uploads
+media/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Cursor
+.cursor/

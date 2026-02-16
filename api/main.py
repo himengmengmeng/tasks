@@ -17,12 +17,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+# 加载环境变量
+from dotenv import load_dotenv
+load_dotenv()
+
 # 导入所有路由
 import api.auth as auth_module
 import api.goals as goals_module  
 import api.words as words_module
 import api.tags as tags_module
 import api.tasks as tasks_module
+import api.chat as chat_module
 
 app = FastAPI(
     title="Goals'APIs",
@@ -55,6 +60,8 @@ app.add_middleware(
         "http://127.0.0.1:8002",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:5176",
+        "http://127.0.0.1:5176",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -79,6 +86,9 @@ app.include_router(words_module.router, prefix="/api/words", tags=["Vocabulary M
 # 5. Tags Management (调整到最后)
 app.include_router(tags_module.router, prefix="/api/tags", tags=["Tags Management"])
 
+# 6. AI Chat
+app.include_router(chat_module.router, prefix="/api/chat", tags=["AI Chat"])
+
 # 挂载媒体文件
 from django.conf import settings
 app.mount("/media", StaticFiles(directory=settings.MEDIA_ROOT), name="media")
@@ -92,9 +102,10 @@ async def root():
         "endpoints": {
             "auth": "/api/auth",
             "goals": "/api/goals",
-            "tasks": "/api/tasks",  # 调整顺序
-            "words": "/api/words",  # 调整顺序
+            "tasks": "/api/tasks",
+            "words": "/api/words",
             "tags": "/api/tags",
+            "chat": "/api/chat",
             "docs": "/docs"
         }
     }
