@@ -4,12 +4,13 @@
 
 # Goals & Vocabulary Management System
 
-A comprehensive personal goal management and English vocabulary learning platform, integrating Django REST Framework and FastAPI technology stacks.
+A comprehensive personal goal management and English vocabulary learning platform, integrating Django REST Framework, FastAPI, and an **AI Chat Agent** powered by LangGraph and MCP (Model Context Protocol).
 
 ## 📋 Project Overview
 
 This is a full-stack personal management application with the following main features:
 
+- **🤖 AI Chat Agent** (NEW): Conversational AI assistant powered by LangGraph that can manage your goals, tasks, and vocabulary through natural language
 - **🎯 Goal Management**: Create, track, and manage personal goals with priority and status management
 - **📝 Task Management**: Create specific actionable tasks for goals
 - **📚 Vocabulary Learning**: Manage English vocabulary learning with multimedia content support
@@ -17,25 +18,85 @@ This is a full-stack personal management application with the following main fea
 - **🔐 User Authentication**: Secure JWT-based authentication system
 - **📎 File Management**: Support for multiple file formats and media file uploads
 
+## 🤖 AI Chat Agent
+
+The system includes an intelligent conversational AI agent that allows users to manage all resources through natural language:
+
+### Architecture
+
+```
+User (Text/Voice) → React Frontend → FastAPI SSE Endpoint → LangGraph Agent → OpenAI GPT-4o-mini
+                                                                    ↓
+                                                              MCP Tool Layer
+                                                                    ↓
+                                                          Django ORM (Database)
+```
+
+### Key Components
+
+| Component | Location | Description |
+|-----------|----------|-------------|
+| **LangGraph Agent** | `api/agent/graph.py` | ReAct-pattern stateful agent with tool-calling capabilities |
+| **Agent Prompts** | `api/agent/prompts.py` | System prompt and conversation naming prompt |
+| **Agent Tools** | `api/agent/tools.py` | 25 LangChain-compatible tools wrapping all CRUD operations |
+| **MCP Server** | `api/mcp_server/server.py` | FastMCP server exposing tools via Model Context Protocol |
+| **MCP Tool Functions** | `api/mcp_server/tools_goals.py`, `tools_words.py` | Async Django ORM wrappers for Goals/Tasks/Tags/Words |
+| **Chat API** | `api/chat.py` | FastAPI router with SSE streaming for real-time AI responses |
+| **Conversation Models** | `ai_chat/models.py` | Django models for Conversation and Message persistence |
+
+### AI Capabilities
+
+- **Natural Language CRUD**: Create, read, update, and delete Goals, Tasks, Goal Tags, English Words, and Word Tags through conversation
+- **Intent Recognition**: Automatically recognizes user intent and invokes the appropriate MCP tools
+- **Streaming Responses**: Real-time token-by-token streaming via Server-Sent Events (SSE)
+- **Conversation Management**: Auto-summarized conversation names, persistent message history
+- **General Q&A**: Handles general questions beyond business operations
+- **Tool Transparency**: Users can see which tools are being called and their results
+
+### Chat API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/chat/conversations` | List user conversations |
+| `POST` | `/api/chat/conversations` | Create new conversation |
+| `GET` | `/api/chat/conversations/{id}` | Get conversation with messages |
+| `DELETE` | `/api/chat/conversations/{id}` | Delete conversation |
+| `POST` | `/api/chat/conversations/{id}/messages` | Send message & stream AI response (SSE) |
+
+### SSE Event Types
+
+| Event | Description |
+|-------|-------------|
+| `token` | Streaming text token from AI |
+| `tool_call` | AI is invoking a tool (name + arguments) |
+| `tool_result` | Tool execution result |
+| `done` | Stream complete (includes message_id, conversation_name) |
+| `error` | Error occurred during processing |
+
 ## 🛠️ Tech Stack
 
 ### Backend
-- **Django 4.2.21** - Main framework
+- **Django 4.2.21** - Main framework & ORM
 - **FastAPI** - API service framework
 - **Django REST Framework** - REST API
 - **MySQL** - Database
 - **Redis** - Cache (optional)
 - **JWT** - User authentication
 
+### AI & Agent
+- **LangGraph** - Stateful AI agent framework (ReAct pattern)
+- **LangChain + OpenAI** - LLM integration (GPT-4o-mini)
+- **MCP (Model Context Protocol)** - Tool exposure protocol via FastMCP
+- **SSE (Server-Sent Events)** - Real-time streaming responses
+
 ### Frontend Integration
-- Supports modern frontend frameworks like React/Vue
+- Supports modern frontend frameworks like React
 - CORS configuration
 - Static media file serving
 
 ### Development Tools
 - **Django Debug Toolbar** - Debugging tool
 - **django-extensions** - Django extensions
-- **OpenAI** - AI feature integration
 - **Locust** - Performance testing
 
 ## 🚀 Quick Start
@@ -45,6 +106,7 @@ This is a full-stack personal management application with the following main fea
 - Python 3.8+
 - MySQL 8.0+
 - Redis (optional, for caching)
+- OpenAI API Key (for AI Chat Agent)
 
 ### Installation Steps
 
@@ -56,18 +118,31 @@ This is a full-stack personal management application with the following main fea
 
 2. **Create virtual environment**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # Linux/Mac
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/Mac
    # or
-   venv\Scripts\activate     # Windows
+   .venv\Scripts\activate     # Windows
    ```
 
 3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
+   pip install -r requirements-api.txt
    ```
 
-4. **Database configuration**
+4. **Configure environment variables**
+
+   Copy the example file and fill in your keys:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Edit `.env`:
+   ```env
+   OPENAI_API_KEY=your-openai-api-key-here
+   ```
+
+5. **Database configuration**
 
    Create MySQL database:
    ```sql
@@ -88,29 +163,39 @@ This is a full-stack personal management application with the following main fea
    }
    ```
 
-5. **Run migrations**
+6. **Run migrations**
    ```bash
    python manage.py migrate
    ```
 
-6. **Create superuser**
+7. **Create superuser**
    ```bash
    python manage.py createsuperuser
    ```
 
-### Starting the Server
+### Starting the Services
 
-#### Option 1: Django Development Server
+You need to start **three services** for full functionality:
+
+#### 1. Django Admin Server
 ```bash
 python manage.py runserver
 ```
-Access: http://127.0.0.1:8000
+Access: http://127.0.0.1:8000/admin
 
-#### Option 2: FastAPI Server (Recommended)
+#### 2. FastAPI Server (Main API + AI Chat)
 ```bash
 uvicorn api.main:app --host 0.0.0.0 --port 8001 --reload
 ```
 Access: http://127.0.0.1:8001
+
+#### 3. MCP Server (Optional, for external MCP clients)
+```bash
+python -m api.mcp_server.run_server
+```
+Access: http://127.0.0.1:8002
+
+> **Note**: The AI Chat Agent works without the standalone MCP server, as tools are invoked directly within the FastAPI process. The MCP server is only needed if you want to connect external MCP clients.
 
 ### API Documentation
 
@@ -125,6 +210,13 @@ After starting the FastAPI server, visit:
 - `POST /api/auth/logout` - User logout
 - `POST /api/auth/refresh` - Refresh token
 - `GET /api/auth/me` - Get current user info
+
+### AI Chat (`/api/chat`)
+- `GET /api/chat/conversations` - List conversations
+- `POST /api/chat/conversations` - Create conversation
+- `GET /api/chat/conversations/{id}` - Get conversation detail with messages
+- `DELETE /api/chat/conversations/{id}` - Delete conversation
+- `POST /api/chat/conversations/{id}/messages` - Send message (SSE streaming response)
 
 ### Goals Management (`/api/goals`)
 - `GET /api/goals/` - Get goals list
@@ -146,7 +238,7 @@ After starting the FastAPI server, visit:
 - `GET /api/words/{id}` - Get word details
 - `PUT /api/words/{id}` - Update word
 - `DELETE /api/words/{id}` - Delete word
-- `POST /api/words/{id}/media` - Upload media file (images, videos, documents)
+- `POST /api/words/{id}/media` - Upload media file
 - `DELETE /api/words/{id}/media/{media_id}` - Delete media file
 
 ### Tags Management (`/api/tags`)
@@ -160,14 +252,9 @@ After starting the FastAPI server, visit:
 
 ### Environment Variables
 
-Create a `.env` file for sensitive information:
+Create a `.env` file (see `.env.example`):
 ```env
-SECRET_KEY=your-secret-key-here
-DATABASE_NAME=tasks
-DATABASE_USER=your_db_user
-DATABASE_PASSWORD=your_db_password
-FASTAPI_HOST=0.0.0.0
-FASTAPI_PORT=8001
+OPENAI_API_KEY=your-openai-api-key-here
 ```
 
 ### Media File Configuration
@@ -199,6 +286,14 @@ Media files are stored in the `media/` directory, automatically organized by dat
 ### Tag Model
 - Unified tag system supporting goals, tasks, and words
 
+### Conversation Model (ai_chat.Conversation)
+- Conversation name (auto-summarized by LLM), creator, timestamps
+- One-to-many relationship with Messages
+
+### Message Model (ai_chat.Message)
+- Role (human/ai), content, tool call details
+- Foreign key to Conversation
+
 ## 🧪 Testing
 
 Run unit tests:
@@ -220,10 +315,7 @@ gunicorn root_directory.wsgi:application --bind 0.0.0.0:8000
 
 ### Using Docker
 ```bash
-# Build image
 docker build -t goals-app .
-
-# Run container
 docker run -p 8000:8000 goals-app
 ```
 
