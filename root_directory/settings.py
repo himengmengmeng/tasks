@@ -94,6 +94,8 @@ WSGI_APPLICATION = 'root_directory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'CONN_MAX_AGE': 600,          # 连接最多复用 10 分钟后回收
+        'CONN_HEALTH_CHECKS': True,   # Django 4.1+ 每次使用前检查连接是否存活
         'NAME': 'tasks',          # 确保数据库已创建
         'HOST': 'localhost',
         'USER': 'root',            # MySQL 用户名
