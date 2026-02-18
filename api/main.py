@@ -13,9 +13,10 @@ sys.path.append(str(BASE_DIR))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'root_directory.settings')
 django.setup()
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from django.db import close_old_connections
 
 # 加载环境变量
 from dotenv import load_dotenv
@@ -67,6 +68,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.middleware("http")
+async def django_db_cleanup_middleware(request: Request, call_next):
+    close_old_connections()
+    response = await call_next(request)
+    close_old_connections()
+    return response
 
 # ==================== 调整路由包含顺序 ====================
 # 按照您想要的顺序包含路由，这会影响文档中的显示顺序
