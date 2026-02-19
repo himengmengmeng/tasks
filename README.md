@@ -10,7 +10,7 @@ A comprehensive personal goal management and English vocabulary learning platfor
 
 This is a full-stack personal management application with the following main features:
 
-- **🤖 AI Chat Agent** (NEW): Conversational AI assistant powered by LangGraph that can manage your goals, tasks, and vocabulary through natural language
+- **🤖 AI Chat Agent** (NEW): Conversational XMeng powered by LangGraph that can manage your goals, tasks, and vocabulary through natural language
 - **🎯 Goal Management**: Create, track, and manage personal goals with priority and status management
 - **📝 Task Management**: Create specific actionable tasks for goals
 - **📚 Vocabulary Learning**: Manage English vocabulary learning with multimedia content support
