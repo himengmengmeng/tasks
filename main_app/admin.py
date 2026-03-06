@@ -209,7 +209,7 @@ class EnglishWordAdmin(admin.ModelAdmin):
     def import_excel_view(self, request):
         """处理Excel文件导入的视图"""
         context = {
-            'title': 'impoert English Words from Excel',
+            'title': 'impoert Vocabulary from Excel',
             **self.admin_site.each_context(request),
         }
         
@@ -335,7 +335,31 @@ class TagAdmin(admin.ModelAdmin):
 
 
 
-# 先去掉了这部分的展示
+@admin.register(models.EmailScheduleConfig)
+class EmailScheduleConfigAdmin(admin.ModelAdmin):
+    list_display = ['user', 'is_active', 'timezone', 'send_times_display', 'words_per_email', 'updated_at']
+    list_filter = ['is_active', 'story_language']
+    search_fields = ['user__username', 'user__email']
+    readonly_fields = ['created_at', 'updated_at']
+
+    def send_times_display(self, obj):
+        return ', '.join(obj.send_times) if obj.send_times else '-'
+    send_times_display.short_description = 'Send Times'
+
+
+@admin.register(models.StoryEmail)
+class StoryEmailAdmin(admin.ModelAdmin):
+    list_display = ['subject', 'user', 'status', 'sent_at', 'recipients_display']
+    list_filter = ['status', 'sent_at']
+    search_fields = ['subject', 'user__username', 'story_content']
+    readonly_fields = ['user', 'word_snapshots', 'story_content', 'subject', 'recipient_emails', 'sent_at', 'status', 'error_message']
+    filter_horizontal = ['words']
+
+    def recipients_display(self, obj):
+        return ', '.join(obj.recipient_emails) if obj.recipient_emails else '-'
+    recipients_display.short_description = 'Recipients'
+
+
 #@admin.register(models.EnglishWordMedia)
 class EnglishWordMediaAdmin(admin.ModelAdmin):
     """英文单词多媒体文件管理"""

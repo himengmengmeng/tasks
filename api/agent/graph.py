@@ -24,27 +24,29 @@ _naming_llm = None
 
 
 def get_chat_llm():
-    """Get or create the chat LLM instance."""
+    """Get or create the chat LLM instance (DeepSeek)."""
     global _chat_llm
     if _chat_llm is None:
         _chat_llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model="deepseek-chat",
             temperature=0.7,
             streaming=True,
-            api_key=os.getenv("OPENAI_API_KEY"),
+            api_key=os.getenv("DEEPSEEK_API_KEY"),
+            base_url="https://api.deepseek.com",
         )
     return _chat_llm
 
 
 def get_naming_llm():
-    """Get or create the naming LLM instance (non-streaming, low temp)."""
+    """Get or create the naming LLM instance (DeepSeek, non-streaming, low temp)."""
     global _naming_llm
     if _naming_llm is None:
         _naming_llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model="deepseek-chat",
             temperature=0,
             streaming=False,
-            api_key=os.getenv("OPENAI_API_KEY"),
+            api_key=os.getenv("DEEPSEEK_API_KEY"),
+            base_url="https://api.deepseek.com",
         )
     return _naming_llm
 

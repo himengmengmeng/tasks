@@ -35,6 +35,9 @@ from .tools_words import (
     list_words, get_word, create_word, update_word, delete_word,
     list_word_tags, get_word_tag, create_word_tag, update_word_tag, delete_word_tag,
 )
+from .tools_email import (
+    get_email_config, update_email_config, send_test_email, list_email_history,
+)
 
 mcp = FastMCP("Goals MCP Server")
 
@@ -273,3 +276,50 @@ async def tool_delete_word_tag(tag_id: int) -> str:
     """Delete a word tag by its ID."""
     user_id = get_authenticated_user_id()
     return await delete_word_tag(user_id, tag_id)
+
+
+# ==================== Email Tools ====================
+
+@mcp.tool()
+async def tool_get_email_config() -> str:
+    """Get the authenticated user's email schedule configuration (send times, timezone, recipients, etc.)."""
+    user_id = get_authenticated_user_id()
+    return await get_email_config(user_id)
+
+
+@mcp.tool()
+async def tool_update_email_config(
+    is_active: bool = None,
+    timezone: str = "",
+    send_times: str = "",
+    words_per_email: int = 0,
+    extra_recipients: str = "",
+    story_language: str = "",
+    exclude_word_ids: str = "",
+) -> str:
+    """Update email schedule config. send_times: comma-separated HH:MM (e.g. '08:00,18:00'). extra_recipients: comma-separated emails (max 3). story_language: 'english' or 'bilingual'. exclude_word_ids: comma-separated IDs."""
+    user_id = get_authenticated_user_id()
+    return await update_email_config(
+        user_id,
+        is_active=is_active,
+        timezone=timezone or None,
+        send_times=send_times or None,
+        words_per_email=words_per_email or None,
+        extra_recipients=extra_recipients or None,
+        story_language=story_language or None,
+        exclude_word_ids=exclude_word_ids or None,
+    )
+
+
+@mcp.tool()
+async def tool_send_test_email() -> str:
+    """Trigger an immediate test story email to the authenticated user (and any extra recipients)."""
+    user_id = get_authenticated_user_id()
+    return await send_test_email(user_id)
+
+
+@mcp.tool()
+async def tool_list_email_history(skip: int = 0, limit: int = 10) -> str:
+    """List recently sent story emails for the authenticated user."""
+    user_id = get_authenticated_user_id()
+    return await list_email_history(user_id, skip=skip, limit=limit)

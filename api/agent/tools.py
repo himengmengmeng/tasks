@@ -14,6 +14,9 @@ from api.mcp_server.tools_words import (
     list_words, get_word, create_word, update_word, delete_word,
     list_word_tags, get_word_tag, create_word_tag, update_word_tag, delete_word_tag,
 )
+from api.mcp_server.tools_email import (
+    get_email_config, update_email_config, send_test_email, list_email_history,
+)
 
 
 # ==================== Goal Tools ====================
@@ -227,6 +230,50 @@ async def tool_delete_word_tag(user_id: int, tag_id: int) -> str:
     return await delete_word_tag(user_id, tag_id)
 
 
+# ==================== Email Tools ====================
+
+@tool
+async def tool_get_email_config(user_id: int) -> str:
+    """Get the user's email schedule configuration (send times, timezone, recipients, language, etc.)."""
+    return await get_email_config(user_id)
+
+
+@tool
+async def tool_update_email_config(
+    user_id: int,
+    is_active: bool = None,
+    timezone: str = "",
+    send_times: str = "",
+    words_per_email: int = 0,
+    extra_recipients: str = "",
+    story_language: str = "",
+    exclude_word_ids: str = "",
+) -> str:
+    """Update the user's email schedule config. send_times: comma-separated HH:MM (e.g. '08:00,18:00'). extra_recipients: comma-separated emails (max 3). story_language: 'english' or 'bilingual'. exclude_word_ids: comma-separated IDs to exclude."""
+    return await update_email_config(
+        user_id,
+        is_active=is_active,
+        timezone=timezone or None,
+        send_times=send_times or None,
+        words_per_email=words_per_email or None,
+        extra_recipients=extra_recipients or None,
+        story_language=story_language or None,
+        exclude_word_ids=exclude_word_ids or None,
+    )
+
+
+@tool
+async def tool_send_test_email(user_id: int) -> str:
+    """Trigger an immediate test story email for the user (sends to user email + extra recipients)."""
+    return await send_test_email(user_id)
+
+
+@tool
+async def tool_list_email_history(user_id: int, skip: int = 0, limit: int = 10) -> str:
+    """List recently sent story emails for the user."""
+    return await list_email_history(user_id, skip=skip, limit=limit)
+
+
 def get_all_tools():
     """Return all available tools."""
     return [
@@ -235,4 +282,5 @@ def get_all_tools():
         tool_list_goal_tags, tool_get_goal_tag, tool_create_goal_tag, tool_update_goal_tag, tool_delete_goal_tag,
         tool_list_words, tool_get_word, tool_create_word, tool_update_word, tool_delete_word,
         tool_list_word_tags, tool_get_word_tag, tool_create_word_tag, tool_update_word_tag, tool_delete_word_tag,
+        tool_get_email_config, tool_update_email_config, tool_send_test_email, tool_list_email_history,
     ]

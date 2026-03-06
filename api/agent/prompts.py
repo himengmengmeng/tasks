@@ -25,6 +25,11 @@ SYSTEM_PROMPT = """You are a helpful XMeng for a Goals & Vocabulary management a
 - Create, list, update, and delete word tags
 - Tags can be associated with English words
 
+### Email Schedule Management
+- View and configure periodic vocabulary story emails
+- Update send frequency (number of time slots per day), specific send times (HH:MM), timezone, words per email, extra recipients, story language (english/bilingual), and excluded word IDs
+- Trigger test emails and view email sending history
+
 ## Guidelines
 
 1. **Language**: Respond in the same language the user uses. If they speak Chinese, respond in Chinese. If English, respond in English.

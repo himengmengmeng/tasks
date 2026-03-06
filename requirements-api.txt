@@ -21,6 +21,9 @@ python-dotenv>=1.0.0
 # MCP
 mcp[cli]>=1.0.0
 
+# Scheduler
+APScheduler>=3.10.0
+
 # HTTP/SSE
 httpx-sse>=0.4.0
 sse-starlette>=2.0.0

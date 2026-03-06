@@ -29,6 +29,8 @@ import api.words as words_module
 import api.tags as tags_module
 import api.tasks as tasks_module
 import api.chat as chat_module
+import api.email_endpoints as email_module
+from api.email_scheduler import start_scheduler, shutdown_scheduler
 
 app = FastAPI(
     title="Goals'APIs",
@@ -97,9 +99,20 @@ app.include_router(tags_module.router, prefix="/api/tags", tags=["Tags Managemen
 # 6. AI Chat
 app.include_router(chat_module.router, prefix="/api/chat", tags=["AI Chat"])
 
+# 7. Email Service
+app.include_router(email_module.router, prefix="/api/emails", tags=["Email Service"])
+
 # 挂载媒体文件
 from django.conf import settings
 app.mount("/media", StaticFiles(directory=settings.MEDIA_ROOT), name="media")
+
+@app.on_event("startup")
+async def on_startup():
+    start_scheduler()
+
+@app.on_event("shutdown")
+async def on_shutdown():
+    shutdown_scheduler()
 
 @app.get("/")
 async def root():
@@ -114,6 +127,7 @@ async def root():
             "words": "/api/words",
             "tags": "/api/tags",
             "chat": "/api/chat",
+            "emails": "/api/emails",
             "docs": "/docs"
         }
     }
