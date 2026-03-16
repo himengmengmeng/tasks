@@ -47,6 +47,7 @@ app = FastAPI(
 )
 
 
+_extra_origins = [o.strip() for o in os.getenv("CORS_EXTRA_ORIGINS", "").split(",") if o.strip()]
 # CORS 配置
 app.add_middleware(
     CORSMiddleware,
@@ -65,7 +66,7 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "http://localhost:5176",
         "http://127.0.0.1:5176",
-    ],
+    ] + _extra_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

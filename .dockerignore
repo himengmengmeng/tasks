@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+.env
+*.log
+media/
+node_modules/
+.DS_Store
+goals_backup_*.sql
+django.log

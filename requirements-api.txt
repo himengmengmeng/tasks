@@ -13,9 +13,8 @@ pydantic-settings>=2.0.0
 # 其他工具
 python-multipart>=0.0.6
 
-# AI Agent
+# AI Agent (langchain-openai is in requirements.txt)
 langgraph>=1.0.0
-langchain-openai>=1.0.0
 python-dotenv>=1.0.0
 
 # MCP

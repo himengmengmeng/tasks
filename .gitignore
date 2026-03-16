@@ -43,3 +43,13 @@ build/
 
 # Cursor
 .cursor/
+
+# Database backups
+*.sql
+
+# Deploy scripts with credentials
+deploy/remote.sh
+deploy/scp-upload.exp
+
+# Deploy runtime (server-specific)
+deploy/.env

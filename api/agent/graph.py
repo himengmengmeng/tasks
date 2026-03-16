@@ -135,6 +135,7 @@ async def stream_agent_response(
             elif kind == "on_tool_start":
                 tool_name = event.get("name", "unknown")
                 tool_input = event.get("data", {}).get("input", {})
+                logger.info(f"Tool INVOKED: {tool_name} with args: {tool_input}")
                 tool_calls_data.append({
                     "name": tool_name,
                     "args": tool_input,
@@ -147,6 +148,7 @@ async def stream_agent_response(
                 tool_output = event.get("data", {}).get("output", "")
                 if isinstance(tool_output, ToolMessage):
                     tool_output = tool_output.content
+                logger.info(f"Tool RESULT: {tool_name} -> {str(tool_output)[:200]}")
                 for tc in tool_calls_data:
                     if tc["name"] == tool_name and tc["result"] is None:
                         tc["result"] = str(tool_output)[:500]
