@@ -2,17 +2,20 @@
 LangChain-compatible tool wrappers that call the MCP server tools directly.
 Instead of going through MCP transport, we call the underlying async functions
 directly for simplicity and performance within the same process.
+
+DELETE tools are intentionally excluded to prevent the LLM from accidentally
+deleting user data (goals, tasks, tags, words).
 """
 from langchain_core.tools import tool
 
 from api.mcp_server.tools_goals import (
-    list_goals, get_goal, create_goal, update_goal, delete_goal,
-    list_tasks, get_task, create_task, update_task, delete_task,
-    list_goal_tags, get_goal_tag, create_goal_tag, update_goal_tag, delete_goal_tag,
+    list_goals, get_goal, create_goal, update_goal,
+    list_tasks, get_task, create_task, update_task,
+    list_goal_tags, get_goal_tag, create_goal_tag, update_goal_tag,
 )
 from api.mcp_server.tools_words import (
-    list_words, get_word, create_word, update_word, delete_word,
-    list_word_tags, get_word_tag, create_word_tag, update_word_tag, delete_word_tag,
+    list_words, get_word, create_word, update_word,
+    list_word_tags, get_word_tag, create_word_tag, update_word_tag,
 )
 from api.mcp_server.tools_email import (
     get_email_config, update_email_config, send_test_email, list_email_history,
@@ -64,12 +67,6 @@ async def tool_update_goal(user_id: int, goal_id: int, title: str = "",
     )
 
 
-@tool
-async def tool_delete_goal(user_id: int, goal_id: int) -> str:
-    """Delete a goal by its ID. This action cannot be undone."""
-    return await delete_goal(user_id, goal_id)
-
-
 # ==================== Task Tools ====================
 
 @tool
@@ -116,12 +113,6 @@ async def tool_update_task(user_id: int, task_id: int, name: str = "",
     )
 
 
-@tool
-async def tool_delete_task(user_id: int, task_id: int) -> str:
-    """Delete a task by its ID. This action cannot be undone."""
-    return await delete_task(user_id, task_id)
-
-
 # ==================== Goal Tag Tools ====================
 
 @tool
@@ -146,12 +137,6 @@ async def tool_create_goal_tag(user_id: int, name: str) -> str:
 async def tool_update_goal_tag(user_id: int, tag_id: int, name: str) -> str:
     """Update a goal tag's name."""
     return await update_goal_tag(user_id, tag_id, name)
-
-
-@tool
-async def tool_delete_goal_tag(user_id: int, tag_id: int) -> str:
-    """Delete a goal tag by its ID."""
-    return await delete_goal_tag(user_id, tag_id)
 
 
 # ==================== Word Tools ====================
@@ -192,12 +177,6 @@ async def tool_update_word(user_id: int, word_id: int, title: str = "",
     )
 
 
-@tool
-async def tool_delete_word(user_id: int, word_id: int) -> str:
-    """Delete an English word by its ID. This action cannot be undone."""
-    return await delete_word(user_id, word_id)
-
-
 # ==================== Word Tag Tools ====================
 
 @tool
@@ -222,12 +201,6 @@ async def tool_create_word_tag(user_id: int, name: str) -> str:
 async def tool_update_word_tag(user_id: int, tag_id: int, name: str) -> str:
     """Update a word tag's name."""
     return await update_word_tag(user_id, tag_id, name)
-
-
-@tool
-async def tool_delete_word_tag(user_id: int, tag_id: int) -> str:
-    """Delete a word tag by its ID."""
-    return await delete_word_tag(user_id, tag_id)
 
 
 # ==================== Email Tools ====================
@@ -275,12 +248,12 @@ async def tool_list_email_history(user_id: int, skip: int = 0, limit: int = 10) 
 
 
 def get_all_tools():
-    """Return all available tools."""
+    """Return all available tools (delete tools excluded for safety)."""
     return [
-        tool_list_goals, tool_get_goal, tool_create_goal, tool_update_goal, tool_delete_goal,
-        tool_list_tasks, tool_get_task, tool_create_task, tool_update_task, tool_delete_task,
-        tool_list_goal_tags, tool_get_goal_tag, tool_create_goal_tag, tool_update_goal_tag, tool_delete_goal_tag,
-        tool_list_words, tool_get_word, tool_create_word, tool_update_word, tool_delete_word,
-        tool_list_word_tags, tool_get_word_tag, tool_create_word_tag, tool_update_word_tag, tool_delete_word_tag,
+        tool_list_goals, tool_get_goal, tool_create_goal, tool_update_goal,
+        tool_list_tasks, tool_get_task, tool_create_task, tool_update_task,
+        tool_list_goal_tags, tool_get_goal_tag, tool_create_goal_tag, tool_update_goal_tag,
+        tool_list_words, tool_get_word, tool_create_word, tool_update_word,
+        tool_list_word_tags, tool_get_word_tag, tool_create_word_tag, tool_update_word_tag,
         tool_get_email_config, tool_update_email_config, tool_send_test_email, tool_list_email_history,
     ]
