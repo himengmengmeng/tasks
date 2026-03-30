@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='englishword',
-            options={'ordering': ['-created_at'], 'verbose_name': 'English Word', 'verbose_name_plural': 'English Words'},
+            options={'ordering': ['-created_at'], 'verbose_name': 'English Word', 'verbose_name_plural': 'Vocabularies'},
         ),
         migrations.AlterModelOptions(
             name='englishwordmedia',

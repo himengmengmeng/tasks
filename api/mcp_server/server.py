@@ -1,6 +1,11 @@
 """
-MCP Server exposing Goals/Tasks/Words CRUD operations as tools.
+MCP Server exposing Goals/Tasks/Words operations as tools.
 Uses SSE transport on port 8002.
+
+DELETE tools are intentionally excluded from this MCP server to prevent
+the LLM from accidentally deleting user data (goals, tasks, tags, words).
+The underlying delete functions still exist in tools_goals.py / tools_words.py
+for use by other internal code paths if needed.
 
 When accessed via the MCP Server (external), user_id is extracted from
 the JWT token by the auth middleware. The tool functions do NOT accept
@@ -27,13 +32,13 @@ from mcp.server.fastmcp import FastMCP
 
 from .auth import get_authenticated_user_id
 from .tools_goals import (
-    list_goals, get_goal, create_goal, update_goal, delete_goal,
-    list_tasks, get_task, create_task, update_task, delete_task,
-    list_goal_tags, get_goal_tag, create_goal_tag, update_goal_tag, delete_goal_tag,
+    list_goals, get_goal, create_goal, update_goal,
+    list_tasks, get_task, create_task, update_task,
+    list_goal_tags, get_goal_tag, create_goal_tag, update_goal_tag,
 )
 from .tools_words import (
-    list_words, get_word, create_word, update_word, delete_word,
-    list_word_tags, get_word_tag, create_word_tag, update_word_tag, delete_word_tag,
+    list_words, get_word, create_word, update_word,
+    list_word_tags, get_word_tag, create_word_tag, update_word_tag,
 )
 from .tools_email import (
     get_email_config, update_email_config, send_test_email, list_email_history,
@@ -91,13 +96,6 @@ async def tool_update_goal(goal_id: int, title: str = "",
     )
 
 
-@mcp.tool()
-async def tool_delete_goal(goal_id: int) -> str:
-    """Delete a goal by its ID. This action cannot be undone."""
-    user_id = get_authenticated_user_id()
-    return await delete_goal(user_id, goal_id)
-
-
 # ==================== Task Tools ====================
 
 @mcp.tool()
@@ -148,13 +146,6 @@ async def tool_update_task(task_id: int, name: str = "",
     )
 
 
-@mcp.tool()
-async def tool_delete_task(task_id: int) -> str:
-    """Delete a task by its ID. This action cannot be undone."""
-    user_id = get_authenticated_user_id()
-    return await delete_task(user_id, task_id)
-
-
 # ==================== Goal Tag Tools ====================
 
 @mcp.tool()
@@ -183,13 +174,6 @@ async def tool_update_goal_tag(tag_id: int, name: str) -> str:
     """Update a goal tag's name."""
     user_id = get_authenticated_user_id()
     return await update_goal_tag(user_id, tag_id, name)
-
-
-@mcp.tool()
-async def tool_delete_goal_tag(tag_id: int) -> str:
-    """Delete a goal tag by its ID."""
-    user_id = get_authenticated_user_id()
-    return await delete_goal_tag(user_id, tag_id)
 
 
 # ==================== Word Tools ====================
@@ -234,13 +218,6 @@ async def tool_update_word(word_id: int, title: str = "",
     )
 
 
-@mcp.tool()
-async def tool_delete_word(word_id: int) -> str:
-    """Delete an English word by its ID. This action cannot be undone."""
-    user_id = get_authenticated_user_id()
-    return await delete_word(user_id, word_id)
-
-
 # ==================== Word Tag Tools ====================
 
 @mcp.tool()
@@ -269,13 +246,6 @@ async def tool_update_word_tag(tag_id: int, name: str) -> str:
     """Update a word tag's name."""
     user_id = get_authenticated_user_id()
     return await update_word_tag(user_id, tag_id, name)
-
-
-@mcp.tool()
-async def tool_delete_word_tag(tag_id: int) -> str:
-    """Delete a word tag by its ID."""
-    user_id = get_authenticated_user_id()
-    return await delete_word_tag(user_id, tag_id)
 
 
 # ==================== Email Tools ====================
