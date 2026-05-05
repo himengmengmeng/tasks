@@ -87,9 +87,9 @@ async def async_get_goals(queryset, skip: int, limit: int):
 async def list_goals(
     skip: int = Query(0, ge=0, description="跳过记录数"),
     limit: int = Query(100, ge=1, le=1000, description="每页数量"),
-    status: Optional[str] = Query(None, description="按状态过滤"),
-    priority: Optional[str] = Query(None, description="按优先级过滤"),
-    tag_id: Optional[int] = Query(None, description="按标签ID过滤"),
+    status: Optional[List[str]] = Query(None, description="按状态过滤(可多选)"),
+    priority: Optional[List[str]] = Query(None, description="按优先级过滤(可多选)"),
+    tag_id: Optional[List[int]] = Query(None, description="按标签ID过滤(可多选)"),
     current_user: User = Depends(get_current_active_user)
 ) -> GoalListResponse:
     """获取目标列表"""
@@ -97,13 +97,13 @@ async def list_goals(
     from goal_app.models import Goal
     queryset = Goal.objects.filter(creator=current_user)
     
-    # 应用过滤器
+    # 应用过滤器（支持多选）
     if status:
-        queryset = queryset.filter(status=status)
+        queryset = queryset.filter(status__in=status)
     if priority:
-        queryset = queryset.filter(priority=priority)
+        queryset = queryset.filter(priority__in=priority)
     if tag_id:
-        queryset = queryset.filter(tags__id=tag_id)
+        queryset = queryset.filter(tags__id__in=tag_id).distinct()
     
     # 使用异步方式获取数据
     goals, total = await async_get_goals(queryset, skip, limit)

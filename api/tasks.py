@@ -95,10 +95,10 @@ def sync_get_goal(goal_id, creator):
 async def list_tasks(
     skip: int = Query(0, ge=0, description="跳过记录数"),
     limit: int = Query(100, ge=1, le=1000, description="每页数量"),
-    status: Optional[str] = Query(None, description="按状态过滤"),
-    priority: Optional[str] = Query(None, description="按优先级过滤"),
-    goal_id: Optional[int] = Query(None, description="按目标ID过滤"),
-    tag_id: Optional[int] = Query(None, description="按标签ID过滤"),
+    status: Optional[List[str]] = Query(None, description="按状态过滤(可多选)"),
+    priority: Optional[List[str]] = Query(None, description="按优先级过滤(可多选)"),
+    goal_id: Optional[List[int]] = Query(None, description="按目标ID过滤(可多选)"),
+    tag_id: Optional[List[int]] = Query(None, description="按标签ID过滤(可多选)"),
     current_user: User = Depends(get_current_active_user)
 ) -> TaskListResponse:
     """获取任务列表"""
@@ -108,15 +108,15 @@ async def list_tasks(
         # 构建查询
         queryset = Task.objects.filter(creator=current_user)
         
-        # 应用过滤器
+        # 应用过滤器（支持多选）
         if status:
-            queryset = queryset.filter(status=status)
+            queryset = queryset.filter(status__in=status)
         if priority:
-            queryset = queryset.filter(priority=priority)
+            queryset = queryset.filter(priority__in=priority)
         if goal_id:
-            queryset = queryset.filter(goal_id=goal_id)
+            queryset = queryset.filter(goal_id__in=goal_id)
         if tag_id:
-            queryset = queryset.filter(tags__id=tag_id)
+            queryset = queryset.filter(tags__id__in=tag_id).distinct()
         
         # 预取相关对象
         queryset = queryset.select_related('goal').prefetch_related('tags')
