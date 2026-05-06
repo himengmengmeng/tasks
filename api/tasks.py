@@ -109,8 +109,16 @@ async def list_tasks(
         queryset = Task.objects.filter(creator=current_user)
         
         # 应用过滤器（支持多选）
+        # Task 模型里「进行中」存的是 ongoing；历史上前端曾用 in_progress。
+        # 多选时若只传 in_progress，会漏掉库里为 ongoing 的记录，这里合并两者。
         if status:
-            queryset = queryset.filter(status__in=status)
+            expanded_status: List[str] = list(status)
+            for s in status:
+                if s == "in_progress":
+                    expanded_status.append("ongoing")
+                elif s == "ongoing":
+                    expanded_status.append("in_progress")
+            queryset = queryset.filter(status__in=expanded_status)
         if priority:
             queryset = queryset.filter(priority__in=priority)
         if goal_id:

@@ -98,8 +98,19 @@ async def list_goals(
     queryset = Goal.objects.filter(creator=current_user)
     
     # 应用过滤器（支持多选）
+    # 旧前端用 completed / on_hold；Django Goal 存的是 resolved / blocked
     if status:
-        queryset = queryset.filter(status__in=status)
+        expanded_status: List[str] = list(status)
+        for s in status:
+            if s == "completed":
+                expanded_status.append("resolved")
+            elif s == "resolved":
+                expanded_status.append("completed")
+            if s == "on_hold":
+                expanded_status.append("blocked")
+            elif s == "blocked":
+                expanded_status.append("on_hold")
+        queryset = queryset.filter(status__in=expanded_status)
     if priority:
         queryset = queryset.filter(priority__in=priority)
     if tag_id:
