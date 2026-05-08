@@ -287,6 +287,8 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', '') or EMAIL_HOST_USER or 'noreply@goals-app.local'
+# Shown as display name in the recipient's mail client (address still required for SMTP auth)
+EMAIL_SENDER_NAME = os.getenv('EMAIL_SENDER_NAME', 'Goal App').strip()
 
 
 CACHES = {
