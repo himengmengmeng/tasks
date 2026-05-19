@@ -95,6 +95,7 @@ def sync_get_goal(goal_id, creator):
 async def list_tasks(
     skip: int = Query(0, ge=0, description="跳过记录数"),
     limit: int = Query(100, ge=1, le=1000, description="每页数量"),
+    search: Optional[str] = Query(None, description="搜索任务名称/描述"),
     status: Optional[List[str]] = Query(None, description="按状态过滤(可多选)"),
     priority: Optional[List[str]] = Query(None, description="按优先级过滤(可多选)"),
     goal_id: Optional[List[int]] = Query(None, description="按目标ID过滤(可多选)"),
@@ -107,7 +108,17 @@ async def list_tasks(
         
         # 构建查询
         queryset = Task.objects.filter(creator=current_user)
-        
+
+        # 关键字搜索：name / description
+        if search:
+            from django.db.models import Q
+            keyword = search.strip()
+            if keyword:
+                queryset = queryset.filter(
+                    Q(name__icontains=keyword)
+                    | Q(description__icontains=keyword)
+                )
+
         # 应用过滤器（支持多选）
         # Task 模型里「进行中」存的是 ongoing；历史上前端曾用 in_progress。
         # 多选时若只传 in_progress，会漏掉库里为 ongoing 的记录，这里合并两者。

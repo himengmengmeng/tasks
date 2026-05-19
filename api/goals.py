@@ -87,6 +87,7 @@ async def async_get_goals(queryset, skip: int, limit: int):
 async def list_goals(
     skip: int = Query(0, ge=0, description="跳过记录数"),
     limit: int = Query(100, ge=1, le=1000, description="每页数量"),
+    search: Optional[str] = Query(None, description="搜索目标标题/描述/备注"),
     status: Optional[List[str]] = Query(None, description="按状态过滤(可多选)"),
     priority: Optional[List[str]] = Query(None, description="按优先级过滤(可多选)"),
     tag_id: Optional[List[int]] = Query(None, description="按标签ID过滤(可多选)"),
@@ -96,7 +97,18 @@ async def list_goals(
     # 构建查询
     from goal_app.models import Goal
     queryset = Goal.objects.filter(creator=current_user)
-    
+
+    # 关键字搜索：title / description / notes
+    if search:
+        from django.db.models import Q
+        keyword = search.strip()
+        if keyword:
+            queryset = queryset.filter(
+                Q(title__icontains=keyword)
+                | Q(description__icontains=keyword)
+                | Q(notes__icontains=keyword)
+            )
+
     # 应用过滤器（支持多选）
     # 旧前端用 completed / on_hold；Django Goal 存的是 resolved / blocked
     if status:
